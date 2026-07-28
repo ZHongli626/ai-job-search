@@ -44,9 +44,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Python, Agent-Based Modeling, Computational Economics, Machine Learning (XGBoost, supervised learning), Data Analysis, Economic Research, LaTeX, Mathematica
+**Moderate match areas:** Julia, R, Stata, MATLAB, SQL, Econometrics, Financial Modeling, LLM/AI Workflows (AutoGen), Deep Learning frameworks (PyTorch, TensorFlow)
+**Weak match areas:** Cloud platforms (AWS, GCP), Software engineering at scale
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -58,9 +58,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Academic research (PhD-level), Computational modeling, Economic analysis, Fraud detection research, Agent-based simulation
+**Moderate:** Teaching/course development, Quantitative analysis in finance, Data science projects, Workshop organization
+**Entry-level:** Industry data science, Software development, Consulting, Full-time corporate roles
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -91,19 +91,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Transition from academia to industry roles in AI/ML, computational economics, or data science
+- Apply agent-based modeling and simulation expertise to real-world business problems
+- Work on AI/LLM applications for economic research or business intelligence
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: Building computational models, designing AI/agentic workflows, research with real-world impact, interdisciplinary collaboration, presenting at conferences, teaching/mentoring
+- Tasks that drain: Purely maintenance work without innovation, highly bureaucratic environments, isolated work without collaboration, repetitive data entry
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: PhD completion in Sept 2026; seeking stable position post-defense
+- **Flexibility**: Based in Germany; open to EU positions; remote/hybrid preferred
+- **Professional development**: Prioritize roles that leverage computational economics expertise while building industry experience in AI/ML
 
 ### 6. Salary Benchmark (Optional)
 

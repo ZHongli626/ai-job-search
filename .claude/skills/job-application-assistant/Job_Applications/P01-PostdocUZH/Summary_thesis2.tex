@@ -1,0 +1,159 @@
+% \documentclass[12pt, draft]{article} % not showing the graphs
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage{setspace}
+% \onehalfspacing % Set line spacing to 1.5
+
+% \usepackage{biblatex}
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\usepackage{caption}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{graphics}
+\usepackage{bbm}
+\usepackage{derivative}
+\usepackage{commath, csquotes}
+%\usepackage[showframe]{geometry}
+\addbibresource{references.bib}
+
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{xurl}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{istgame}
+\usepackage{latexsym,xcolor,multicol,booktabs,calligra}
+\usepackage{amsmath,amssymb,BOONDOX-cal,bm}	
+\usepackage{graphicx,pstricks,stackengine}     
+\usepackage{comment}     
+
+\usepackage{tabls}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{array}
+\usepackage[english]{babel}
+\usepackage{subfigure}
+\usepackage{ragged2e}
+\usepackage[bottom]{footmisc}
+\usepackage{mathtools}
+\usepackage[thinc]{esdiff}
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+
+% \title{Introduction to Thesis "Statistical Inference for State-Space Models and Their Application to Complex Environments"}
+\title{Summary of Doctoral Thesis \\ "Strategic Behavior and Economic Dynamics in ICT Markets: An Agent-Based Framework"}
+
+
+\author{Zhongli Wang} 
+%  This work has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 956107, "Economic Policy in Complex Environments (EPOC)".
+%\date{February 2022} 
+
+\begin{document}
+% \include{chapter1}
+\maketitle
+
+\onehalfspacing
+% \section{Introduction}
+
+\begin{comment}
+State-space models (SSMs) provide a widely used framework for analyzing dynamic systems where hidden states evolve over time based on observed variables.
+\textcite{Lux2018EmpiricalModels} summarizes the framework of a general state-space model as: 
+\begin{equation*}
+\begin{aligned}
+    x_t & = f(x_{t-1}, \epsilon_t) \\
+    y_t & = g(x_t, \eta_t)     
+\end{aligned}
+\end{equation*}
+where $x_t$ represents the stochastic evolution in time of a vector of states, $\epsilon_t$ represents a summary for all stochastic factors that enter into the dynamics of $x_t$, $y_t$ represents a vector of measurements, $eta_t$ represents a summary for all stochastic factors that make the vector of measurements a noisy signal of the states $x_t$.
+While SSMs are traditionally applied in econometrics and control theory, this dissertation explores their broader applicability in economic modeling. 
+\vspace{5mm}
+
+Specifically, although the primary models developed in this work are small-scale agent-based models (ABMs) rather than classical SSMs, they share key methodological features. 
+\textcite{Tesfatsion2006ChapterTheory} illustrates that the agent-based modeling specifies the initial state of an economic system by specifying each
+agent’s initial data and behavioral methods and the degree of accessibility of these data
+and methods to other agents, which shares similar features with general SSMs.
+\textcite{Lux2018EmpiricalModels} further summarizes that the estimation of ABMs could profit substantially from the methods for state-space models or slightly more general latent variable models. Moreover, many ABMs, including the models in this thesis, to a large extent satisfy the general framework of a general SSM mentioned above. 
+In particular, ABMs capture system dynamics through agent interactions, which collectively define an evolving state over time. This conceptual similarity allows for the application of statistical inference techniques inspired by SSMs, such as parameter estimation and model validation, to ABMs. By adopting this perspective, the dissertation aims to bridge elements of state-space analysis and agent-based modeling, while recognizing the fundamental differences between the two approaches.
+\vspace{5mm}
+
+Based on the "bottom-up" nature, the ABMs consider the microfoundations of the economic system and have the potential to show emergent behavior in a complex world. Abundant literature suggests potential of this type of models, particularly in macroeconomics \parencite{Axtell2022Agent-BasedFuture} and digital economics \parencite{DawidDelliGatti2018, Dawid2021IntroductionModel}.
+From theory to data, researches related to calibrating ABMs include frequentist approaches, e.g. method of moments, maximum likelihood, and recent Bayesian inference methods, e.g. Bayesian Monte-Carlo and Bayesian kernels. Other advanced methods including neural networks have also been applied \parencite{Grazzini2015EstimationDistance, Lux2018EmpiricalModels, DelliGatti2020RisingModels, Platt2022BayesianNetworks}. 
+Nevertheless, it is important to acknowledge that at the meso-level of economics - particularly when examining competitive dynamics within specific industries - existing approaches may overlook critical complexities. 
+The Information and Communications Technology (ICT) industry provides a compelling example, characterized by intricate dynamics such as platform competition, data restrictions, user experience, and capacity constraints. These complexities have not been sufficiently addressed in prior literature, neither at the theoretical level nor within empirical studies that primarily emphasize structural parameter estimation.
+
+
+\vspace{5mm}
+\end{comment}
+
+The dissertation consists of three integrated chapters that examine strategic decision-making, organizational capabilities, and competitive dynamics in technology-intensive markets. Together, they offer a comprehensive framework for understanding how firms develop and deploy strategic resources in dynamic competitive environments.
+
+% Chapter 1 establishes a strategic management framework for analyzing how regulatory constraints shape firm competitive advantage and strategic positioning. It examines how data governance policies influence organizational decision-making, resource orchestration capabilities, and the resulting performance outcomes across different market contexts.
+% \vspace{5mm}
+
+\textbf{Chapter 1: Heterogeneous Consumers, Firm Competition and the Data Value Chain: An Agent-based Approach} examines how organizations develop dynamic capabilities to navigate complex institutional environments, focusing specifically on data governance challenges in the software industry. Unlike traditional resource configurations, digital assets and capabilities require distinctive strategic approaches due to their intangible nature, network effects, and sensitivity to institutional constraints. This chapter investigates how varying levels of regulatory stringency influence firms' strategic positioning, resource allocation decisions, and ability to create sustainable competitive advantage across geographical markets.
+Methodologically, the chapter integrates industrial organization theory with computational modeling to capture the complex interplay between organizational decision-making, stakeholder interactions, and institutional dynamics. The models analyze how firms develop distinctive capabilities in strategic sensing, regulatory adaptation, and business model reconfiguration in response to heterogeneous governance environments.
+My findings reveal that organizational performance in regulated markets depends critically on firms' ability to develop capabilities that balance compliance with innovation. The research demonstrates how regulatory constraints can serve as selection mechanisms that reshape industry structure, alter the effectiveness of strategic resources, and create opportunities for capability-based differentiation. 
+% \vspace{5mm}
+
+\textbf{Chapter 2: Strategic Firm Capacity Selection under the Network Effects: A Computational Model of Capacity Investment Dynamics in the ICT Industry} extends this analysis by examining strategic resource allocation decisions at the intersection of organizational capabilities, consumer networks, and competitive dynamics. While traditional strategic management perspectives emphasize innovation investment as a driver of competitive advantage, this chapter demonstrates how capability development becomes significantly more complex in technology-intensive ecosystems characterized by network effects and operational constraints.
+This chapter develops a theoretical framework that integrates three critical dimensions of strategic management: capability development through investment, operational excellence through capacity optimization, and stakeholder relationship management through consumer network engagement. The computational models capture how organizational decision-making processes regarding these dimensions co-evolve with stakeholder expectations and competitor responses.
+My findings reveal how organizational capabilities exhibit complex complementarities and trade-offs that challenge conventional resource-based perspectives. Besides, the results demonstrate how consumer congestion and social networks function as co-creators of strategic value rather than passive recipients. 
+Managerially, these insights highlight the importance of developing dynamic balancing capabilities that enable organizations to adapt resource configurations in response to shifting network structures and competitive pressures. They suggest that sustainable competitive advantage in technology-intensive ecosystems emerges from organizational ambidexterity in simultaneously managing innovation, operational excellence, and stakeholder relationships.
+% \vspace{5mm}
+
+\textbf{Chapter 3: Parameter Estimation Methods in an Agent-based Computational Model: Insights on ICT Industrial Dynamics and Policies} bridges theory and practice by examining how the strategic frameworks developed in previous chapters explain empirical patterns of organizational performance in technology markets. This chapter addresses a critical challenge in strategic management research: validating theoretical models of complex organizational phenomena with empirical data to develop actionable insights for management practice.
+Drawing on financial and operational data from leading telecommunications firms (AT\&T and T-Mobile), this chapter demonstrates how organizations translate strategic decisions into measurable performance outcomes across multiple dimensions. The research validates key theoretical propositions while identifying boundary conditions and contextual factors that shape strategic effectiveness.
+Beyond methodological contributions, this chapter provides insights into strategic decision-making under uncertainty. It demonstrates how organizations can develop data-driven approaches to strategic sensing, strategic learning, and strategic adaptation in dynamic competitive landscapes. 
+The findings suggest that strategic effectiveness depends not only on initial resource configurations but also on organizational learning capabilities that enable continuous recalibration of strategic approaches in response to market feedback.
+For management practice, this chapter provides actionable guidance for executives navigating complex strategic decisions regarding capability development, resource allocation, and competitive positioning in technology-intensive industries.
+
+% \section*{Acknowledgments} 
+
+% This work has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 956107, "Economic Policy in Complex Environments (EPOC)".
+
+
+\newpage
+\printbibliography
+
+\end{document}
+
+State-space models ... Example of ABMs, philosophy
+
+This thesis handles the above mentioned economics and statistical problems ... 
+\vspace{5mm}
+
+From the aspect of IO, ABMs 
+
+There is abundant evidence that ABMs can show the feature
+
+connection with IO literature, applications
+\vspace{5mm}
+
+especially digital economics, applications
+\vspace{5mm}
+
+Nevertheless, it is worthwhile to mention that on the meso level of economics, for specific examples in competition dynamics within a single industry, the complexity may be overlooked. The Information and Communications Technology (ICT) industry is a good example, since it involves many complex notions including platform competition, data restrictions, user experience, usage capacities, etc. which are not specified in previous literature, either on the theoretical level or on the empirical level (which focuses on structural parameter estimation).
+
+
+
+There are three main chapters, two are theoretical, the last one is empirical and further suggests the application of the theoretical background of the first two chapters.
+
+The dissertation consists of three main chapters. The first two chapters are theoretical, developing models to analyze firm strategies and market dynamics. 
+The difference in first two chapters is that the Chapter 1 develops the basic theoretical structure of the IO-related model and assess the influence of the data restriction policies on the firm profits and social welfare, while Chapter 2 evaluates the consumer network and the consumer congestion and aims to analyze the possible market outcomes in terms of firm competition.  
+The final chapter is empirical, applying the theoretical foundations established in the first two chapters to real-world data, demonstrating their practical relevance and applicability.
+
+
+Chapter 1 studies the impact of data restrictions on the software market. It aims to answer the question of how the varied levels of data restrictions shape the geographical distribution of economic activities over time. Different from IO models handling traditional goods, software products rely heavily on information systems, are inherently intangible, and are governed by complex licensing mechanisms. Their pricing and availability vary across regions due to differences in local data regulations. 
+To explore this, Chapter 1 employs a two-fold approach considering both game theory and agent-based modeling, simulating interactions among key market participants - software owners and developers, consumers, and governments. The proposed models capture the strategic behavior of software firms, the decision-making processes of diverse consumer groups, and the dynamic pricing mechanisms influenced by evolving regulatory landscapes.
+Findings from the computational experiments reveal that the degree of data restrictions plays a pivotal role in shaping price formation and market structures. Stricter data regulations can lead to price distortions, altered market strategies, and shifts in competitive dynamics. 
+
+Chapter 3 investigates advancing parameter estimation and calibration in ABMs. Despite the potential of ABMs to uncover emergent phenomena and inform policy decisions, the estimation and calibration of model parameters remains a critical challenge. This chapter addresses the issue above by assessing the model set up in Chapter 2, where strategic firm behavior and network effects play a central role.
+To enhance model validity, this chapter employs state-of-the-art estimation techniques, including the Simulated Method of Moments (SMM) and Bayesian Monte Carlo methods, integrating financial data from U.S. telecommunication firms (AT\&T and T-Mobile) to calibrate parameters and validate the model. By systematically comparing these methodologies, this chapter assesses their suitability, effectiveness, and practical implications for agent-based economic modeling.
+This chapter also advances the methodological rigor of ABM parameterization and contributes to the broader discourse on improving the validity and applicability of computational economic models. 
+The findings offer key insights into overcoming industry-specific challenges, enhancing model reliability, and bridging the gap between theoretical modeling and real-world applications.
+
+\thanks{PhD student affiliated with Bielefeld University (UNIBI) and Catholic University of Milan (UCSC). Email address: \url{zhongli.wang@uni-bielefeld.de}. Many thanks for the guidance of Prof. Herbert Dawid (UNIBI), Prof. Domenico Delli Gatti (UCSC) and Prof. Christiane Fuchs (UNIBI).}

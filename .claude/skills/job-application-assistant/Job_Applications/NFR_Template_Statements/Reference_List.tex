@@ -1,0 +1,65 @@
+\documentclass{nfr}
+
+% This LaTeX template is based on the official Word template found here: https://www.forskningsradet.no/siteassets/utlysninger/vedlegg-utlysninger/template-for-project-description-researcher-project-for-experienced-scientists-and-early-career-scientists.docx
+% See the README.md file for more information
+
+% Here's an example bibliography using the numeric (Nature) style and two
+% columns for the reference list.
+\usepackage{tabularx}
+
+% \usepackage{multicol}
+% \renewcommand{\bibpreamble}{\begin{multicols*}{2}}
+% \renewcommand{\bibpostamble}{\end{multicols*}}
+
+% \usepackage{biblatex}
+% \addbibresource{references1.bib}
+
+% \citestyle{nature}
+% \citestyle{}
+\usepackage{comment}
+
+% \bibliographystyle{bst/veryshortnum}
+\bibliographystyle{apalike}
+
+\title{References}
+\author{Zhongli Wang}
+
+\begin{document}
+\maketitle
+
+\begin{tabularx}{\linewidth}{@{}X X@{}}
+
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Prof. Herbert Dawid} \\
+Chair for Economic Theory and Computational Economics \\
+Bielefeld University \\
+\href{mailto:hdawid@uni-bielefeld.de}{hdawid@uni-bielefeld.de}
+\end{minipage}
+&
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Prof. Didier Sornette} \\
+Co-dean of Risks-X Institute \\
+Chair Professor \\
+Southern University of Science and Technology \\
+\href{mailto:dsornette@ethz.ch}{dsornette@ethz.ch}
+\end{minipage}
+\\[6em] % Row spacing
+
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Prof. Domenico Delli Gatti} \\
+Department of Economics and Finance \\
+Director of the Complexity Lab in Economics \\
+Università Cattolica del Sacro Cuore \\
+\href{mailto:domenico.delligatti@unicatt.it}{domenico.delligatti@unicatt.it}
+\end{minipage}
+&
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Prof. Karl Schmedders} \\
+Professor of Finance \\
+IMD Business School \\
+\href{mailto:karl.schmedders@imd.org}{karl.schmedders@imd.org}
+\end{minipage}
+
+\end{tabularx}
+
+\end{document}

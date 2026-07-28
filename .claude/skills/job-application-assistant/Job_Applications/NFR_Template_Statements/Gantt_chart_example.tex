@@ -1,0 +1,102 @@
+\documentclass{nfr}
+
+% An example of how to use the automatic Gantt chart generation feature, assuming duration in quarters.
+% NB: The starred versions: \workpackage*, \task*, \deliverable*, and \milestone* don't add to the Gantt chart and don't require a second argument.
+
+\usepackage{lipsum}
+
+\title{Project title}
+
+\begin{document}
+
+\workpackage{First package}{1/8} % Start Q1 and Q8 or Y2Q4
+\lipsum[-1][-4]
+
+\task{Task one one}{1/4} \lipsum[-1][-4]
+
+\deliverable{\lipsum[-1][-2]}{4}
+
+\milestone{\lipsum[-1][-2]}{3}
+
+\task{Task one two}{3/8} \lipsum[-1][-4]
+
+\deliverable{\lipsum[-1][-2]}{8}
+
+\milestone{\lipsum[-1][-2]}{5}
+
+\workpackage{Second package}{6/16}
+\lipsum[-1][-4]
+
+\task{Task two one}{7/11} \lipsum[-1][-4]
+
+\deliverable{\lipsum[-1][-2]}{11}
+
+\milestone{\lipsum[-1][-2]}{9}
+
+\task{Task two two}{9/16} \lipsum[-1][-4]
+
+\deliverable{\lipsum[-1][-2]}{16}
+
+\milestone{\lipsum[-1][-2]}{12}
+
+\begin{figure}
+    \begin{ganttchart}[
+            expand chart=\textwidth
+        ]{1}{16}
+        \gantttitle{2024}{2}
+        \gantttitlelist{2025,...,2027}{4}
+        \gantttitle{2028}{2}
+        \drawgantt
+        \ganttlink{task1p1}{task2p1}
+        \ganttlink{milestone1p2}{task2p2}
+    \end{ganttchart}
+    \caption{A Gantt chart using the default formatting.}
+\end{figure}
+
+\begin{figure}
+    \definecolor{pastelblue}{RGB}{173,216,230}
+    \begin{ganttchart}[
+        % Fit to width
+        expand chart=\textwidth,
+        % Squeeze the y-axis
+        y unit title=0.9cm,
+        y unit chart=0.5cm,
+        % The box around the graph
+        canvas/.append style={fill=none, draw=black!75, line width=.75pt},
+        % Horizontal grid with the same line style as the box
+         hgrid style/.style={draw=black!5, line width=.75pt},
+        % Vertical grid with every fourth line darker and dashed to signify  a new year. One light, one dashed, two light, repeat.
+        vgrid={*1{draw=black!5, line width=.75pt},{draw=black!75, line width=.75pt, dashed},*2{draw=black!5, line width=.75pt}},
+        % No box around the title and custom fonts etc
+        title/.style={draw=none, fill=none},
+        title label font=\bfseries\footnotesize,
+        title label node/.append style={below=2pt},
+        include title in canvas=false,
+        % Custom fonts and style for the WP bars
+        group label font=\mdseries\small\bfseries\color{black!70},
+        group label node/.append style={left=.1cm},
+        group/.append style={draw=none, fill=gray},
+        % Custom fonts and style for the task bars
+        bar label font=\mdseries\small\color{black!70},
+        bar label node/.append style={left=.1cm},
+        bar/.append style={draw=none, fill=pastelblue},
+        % Shrink the deliverable and milestone symbols
+        deliverable/.append style={xscale=0.5, yscale=0.5},
+        milestone/.append style={xscale=0.5, yscale=0.5},
+        % Custom link style
+        link/.style={-latex, line width=1.5pt},
+        link/.append style={rounded corners=3pt},
+        link mid=.04
+        ]{1}{16}
+        \gantttitle{2024}{2}
+        \gantttitlelist{2025,...,2027}{4}
+        \gantttitle{2028}{2}
+        \drawgantt*
+        \ganttlink{task1p1}{task2p1}
+        \ganttlink{milestone1p2}{task2p2}
+    \end{ganttchart}
+    \caption{A Gantt chart using some fancy formatting and milestones and deliverables overlapping the task bars. Milestones are indicated with diamonds and deliverables with stars.}
+\end{figure}
+
+
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass{nfr}
+
+\title{Data Management Plan}
+\author{Zhongli Wang}
+
+\begin{document}
+\maketitle
+
+\section*{1. Types of Data}
+
+The project will generate three main types of data:
+\begin{itemize}
+    \item \textbf{Simulation data}: outputs from agent-based and network-diffusion models (aggregated indicators, time-series, adoption distributions).
+    \item \textbf{Text-based datasets}: publicly available policy documents, media articles, and institutional reports processed using LLM-assisted workflows.
+    \item \textbf{Qualitative inputs}: notes from expert consultations or stakeholder workshops (non-personal and anonymised).
+\end{itemize}
+No sensitive personal data will be collected; all data involve aggregate or publicly available sources.
+
+\section*{2. Documentation and Metadata}
+
+All datasets will include clear documentation describing: (i) purpose, generation method, and processing steps; (ii) model parameters and version control information; (iii) metadata using Dublin Core where applicable.
+Code and workflows will be documented using README files and reproducible scripts.
+
+\section*{3. Storage and Security}
+
+Data will be stored on secure University of Turku servers with regular backups.  
+Simulation code will be maintained in a private Git repository with access control.  
+Secondment-related files at Lucidminds AI will follow the same security standards and EU data protection guidelines.  
+No personal or confidential data will be stored or transferred.
+All research data and materials necessary for reproducibility will be preserved for at least ten years on institutional repositories. Long-term maintainability of code and simulation models will be ensured through proper versioning and documentation.
+
+
+\section*{4. Ethical and Legal Compliance}
+
+The project complies with GDPR, University of Turku ethical guidelines, and Horizon Europe open science requirements.  
+Only publicly available or fully anonymised data will be used.  
+Textual data derived from policy documents or news sources will follow fair-use and licensing conditions.
+
+\section*{5. Sharing, Reuse, and Open Access}
+
+Where legally permissible:
+\begin{itemize}
+    \item processed datasets (not raw corpora), metadata, and simulation outputs will be deposited in a trusted repository (Zenodo or UTU Research Data Portal);
+    \item code for models and analysis workflows will be released under an open-source licence (e.g., MIT or Apache 2.0);
+    \item publications will follow open-access guidelines.
+\end{itemize}
+Restrictions apply only when data licenses prevent redistribution (e.g., proprietary news corpora).
+
+% \section*{6. Preservation}
+
+
+\end{document}

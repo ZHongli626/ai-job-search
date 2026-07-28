@@ -1,0 +1,62 @@
+\documentclass{nfr}
+
+\bibliographystyle{apalike}
+
+\title{Research Statement}
+\author{Zhongli Wang}
+
+\begin{document}
+\maketitle
+
+My research lies at the intersection of computational social science, economics, and AI systems. I develop agent-based and data-driven models of strategic behavior in complex environments and create reproducible pipelines to calibrate, validate, and stress-test these models. A central question in my work is how heterogeneous agents learn and adapt under constraints, and how AI systems can be designed to be composable, robust, and accountable in real-world settings. This focus aligns closely with TU Darmstadt's Cluster of Excellence \emph{Reasonable Artificial Intelligence (RAI)}, particularly its agenda on developing AI systems with human-like reasoning and communication skills that generalize beyond narrow tasks.
+
+\section*{Current Research and Technical Foundations}
+
+My doctoral dissertation, \textit{Strategic Behavior and Economic Dynamics in ICT Markets: An Agent-based Framework}, develops computational models in which firms and consumers interact through networks, update beliefs under information frictions, and adapt pricing and investment decisions over time. Methodologically, the dissertation contributes three building blocks relevant to RAI:
+(i) multi-agent modeling of strategic interaction under uncertainty,
+(ii) scalable simulation and estimation (parallelized experiments, simulation-based inference, neural-network surrogates), and
+(iii) reproducible research engineering (experiment tracking, robustness checks, and transparent documentation).
+Across the dissertation, I implement large-scale simulations in Python (with \texttt{ray} for parallelism) and use simulation-based econometrics to infer behavioral parameters and evaluate counterfactual policies.
+
+In parallel, I have developed a second research stream on AI-enabled scientific workflows. In the working paper \textit{Agentic Workflows for Economic Research: Design and Implementation} \citep{Dawid2025}, we propose a modular architecture of specialized LLM agents that collaborate across stages of the research lifecycle (data collection, coding, modeling, evaluation), with human-in-the-loop control, auditability, and versioning. The architecture builds on recent advances in tool-augmented language models \citep{schick2023toolformer}, retrieval-augmented generation \citep{lewis2020retrieval}, and reasoning-action integration \citep{yao2022react, wei2022chain}. This experience translates directly to RAI's core concerns: building AI systems from interoperable modules, enforcing reproducibility, and designing evaluation protocols that detect failure modes beyond benchmark performance.
+
+\section*{Research Vision for RAI}
+
+My medium-term research goal is to contribute to Reasonable AI as both an engineering and scientific discipline. I aim to develop AI systems that are composable into larger software systems, robust to distribution shift and adversarial environments, and transparent enough to support verification, debugging, and responsible use. I am particularly interested in research questions where multi-agent interaction and institutional constraints produce complex emergent behavior---a natural bridge between my computational economics background and RAI's system-level goals.
+
+\section*{Systemic AI Track}
+
+\textbf{Proposed project title:} \textit{Composable Agentic Systems for Reliable Reasoning Pipelines in Real-World Text-Rich Environments} \\
+
+\noindent
+\textbf{Motivation.} Modern AI applications increasingly require chaining multiple components (retrieval, extraction, reasoning, verification, summarization) into \emph{end-to-end pipelines} \citep{lewis2020retrieval, yao2022react}. However, these pipelines often fail under domain shift, ambiguous inputs, or compounding errors across modules. RAI's Systemic AI agenda calls for programming foundations that support modular construction and integration of AI into large-scale software systems, with particular emphasis on interpretability and robustness \citep{doshi2017towards}.\\
+
+\noindent
+\textbf{Core idea.} I will develop and evaluate a \textbf{modular agentic architecture} in which specialized AI modules (LLM-based and classical ML/NLP components) are composed via explicit interfaces, shared state representations, and verification routines. The project will focus on \textbf{reliability and robustness} rather than raw task performance: detecting when the system should abstain, request human input, or trigger additional validation.\\
+
+\noindent
+\textbf{Research questions.}
+\begin{itemize}
+    \item When does modular composition improve vs. degrade reliability relative to monolithic models?
+    \item Which verification mechanisms (self-consistency, redundancy across models, constraint checking, uncertainty estimation) best prevent cascading errors?
+    \item How can we formalize and test "reasonableness" criteria for pipelines: robustness, calibration, traceability, and controlled failure?
+\end{itemize}
+
+\noindent
+\textbf{Methods and implementation.}
+\begin{itemize}
+    \item Neurosymbolic / hybrid composition: combine LLM modules with structured components (entity linking, topic/stance/sentiment models, rule-based constraints, and lightweight symbolic checks), drawing on neurosymbolic AI frameworks \citep{d2009neural, serafini2016logic, rocktaschel2017end, nawaz2025review}.
+    \item Experiment harness: build a reproducible benchmarking suite for pipeline-level evaluation (distribution shifts, adversarial perturbations, missing evidence, ambiguous queries), with ablation studies to isolate module contributions.
+    \item Reliability metrics: calibration and selective prediction (coverage--risk trade-offs), trace completeness (evidence provenance), and robustness (performance under perturbations), aligned with RAI goals \citep{doshi2017towards}.
+\end{itemize}
+
+\noindent
+\textbf{Expected outputs.} (i) a reusable open-source pipeline framework for composable agentic systems, (ii) a validated evaluation protocol for pipeline-level robustness and reasonableness, and (iii) one to two papers on compositional reliability and verification in agentic AI systems.
+
+\section*{Why TU Darmstadt / RAI}
+
+RAI offers an ideal environment to develop this agenda. Its focus on systemic foundations, multi-modality \citep{alayrac2022flamingo, li2023llava}, adaptation, and cognitive challenges \citep{rabinowitz2018machine} matches my interests in agentic architectures, robustness, and evaluation. Beyond research, I am motivated by the position's emphasis on helping coordinate and build a research lab. I have experience developing research infrastructure, organizing workshops, and maintaining reproducible workflows across collaborators, and would contribute actively to lab coordination, project acquisition, and mentoring of junior researchers.
+
+\bibliography{NFR_Template_Statements/references1}
+
+\end{document}
