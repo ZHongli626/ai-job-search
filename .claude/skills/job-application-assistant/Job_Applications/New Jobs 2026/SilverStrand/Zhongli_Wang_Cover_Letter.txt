@@ -1,0 +1,44 @@
+Job Application
+Zhongli Wang
+Application for Quant Researcher
+
+  ---------- ------------------------------------------
+  Address:   Astastrasse 22, 33617 Bielefeld, Germany
+  Number:    +49 160 9541 6015
+  Email:     nkwangzhongli@gmail.com
+  ---------- ------------------------------------------
+
+Zhongli Wang
++49 160 9541 6015
+nkwangzhongli@gmail.com
+Bielefeld, Germany
+
+Mark Francis
+Director
+SilverStrand Executive Search Limited
+
+Application for Quant Researcher
+
+Dear Mr. Francis,
+
+I am writing to apply for the Quant Researcher position in Hong Kong. I am completing the final stage of my Ph.D. in Economics at Bielefeld University, with my defense scheduled for September 21, 2026, and I also hold an M.A. in Business and Economics with a Banking and Finance major and a B.Sc. in Finance. My background combines statistical modeling, Python-based computational research, financial data analysis, and clear communication across international teams.
+
+My closest fit with this role is the discipline required to turn noisy data and model output into decisions that can be tested, monitored, and improved. In my doctoral work, I build computational models of strategic firm behavior, estimate parameters, and analyze how market structure changes outcomes under uncertainty. In a published financial-statement fraud detection project, I worked with accounting, financial, and market indicators and applied XGBoost to identify red flags in listed companies.
+
+I would bring the following strengths to a quantitative trading research team:
+
+- Statistical research: Econometrics, machine learning, SMM, MCMC, and agent-based modeling for testing mechanisms in complex market environments.
+
+- Data processing: Advanced Python skills, plus R, Julia, Mathematica, SQL basics, and experience converting financial and behavioral data into reproducible analysis.
+
+- Market-structure perspective: Finance training and research on competition, network effects, capacity constraints, and data-driven markets.
+
+- Execution discipline: Experience preparing models, checking assumptions, presenting results under scrutiny, and collaborating across China and Europe.
+
+I am particularly interested in this opportunity because it combines quantitative research with implementation inside an automated trading framework. I would aim to contribute by building well-documented research pipelines, analyzing large datasets for tradable patterns, checking data and processes before market open, and monitoring strategy behavior with the caution required in live markets. I have not yet worked as a dedicated trading-desk quant, but my training is aligned with the analytical core of the role: statistical inference, programming, financial markets, and disciplined model validation.
+
+Thank you so much for your time and consideration! I would welcome the opportunity to discuss how my research background, financial training, and coding experience can contribute to this Quant Researcher mandate.
+
+Sincerely,
+Zhongli Wang
+[image]
