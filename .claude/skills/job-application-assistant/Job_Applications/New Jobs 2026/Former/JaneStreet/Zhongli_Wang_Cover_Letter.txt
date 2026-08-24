@@ -1,0 +1,54 @@
+                Job Application
+
+
+
+
+            Zhongli Wang
+    Additional Information for Jane Street
+
+
+
+
+Address:        Astastrasse 22, 33617 Bielefeld, Germany
+Number:         +49 160 9541 6015
+Email:          nkwangzhongli@gmail.com
+                                                                                        Zhongli Wang
+                                                                                        Astastrasse 22
+                                                                                       33617 Bielefeld
+                                                                                             Germany
+
+Jane Street
+Hong Kong
+
+Additional information for Jane Street
+
+
+Dear Jane Street Hiring Team,
+I understand that Jane Street does not require a cover letter, so I am using this space only to
+add context that may help with reviewing my application. I am completing the final stage of my
+Ph.D. in Economics at Bielefeld University, with my defense scheduled for September 21, 2026, and
+I am looking for a quantitative research role where rigorous modeling, careful empirical testing, and
+collaborative problem solving sit close to real decisions.
+Jane Street interests me because the research culture described in the application process matches
+how I work. I like problems where the first model is rarely the final answer, where asking better ques-
+tions matters as much as using a more complex method, and where researchers need to communicate
+clearly with people who see the same problem from different angles.
+My background is most relevant in three areas:
+  • Research judgment: I build computational models of strategic behavior, estimate parame-
+    ters, test assumptions, and revise when the evidence points elsewhere.
+  • Python and machine learning: I use Python for modeling, data analysis, and machine
+    learning, including a published financial fraud detection project using XGBoost.
+  • Finance and market intuition: My M.A. and B.Sc. training covered banking, finance,
+    quantitative finance, and financial engineering, while my Ph.D. research studies competition,
+    network effects, and capacity constraints.
+I first became interested in Jane Street through its public material on quantitative research and
+interviews, which stood out for the emphasis on clear thinking, intellectual honesty, and learning
+from mistakes. I am currently moving from doctoral research toward industry because I want my
+modeling and programming work to be tested against live, high-dimensional problems where the
+standard of evidence is demanding.
+Thank you for reviewing my application. I would welcome the opportunity to discuss where my
+research background, financial training, and Python experience could be the strongest fit across
+Jane Street’s teams and oﬀices.
+Sincerely,
+Zhongli Wang
+

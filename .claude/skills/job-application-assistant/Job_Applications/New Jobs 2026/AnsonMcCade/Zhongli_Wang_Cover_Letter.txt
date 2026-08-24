@@ -1,0 +1,57 @@
+               Job Application
+
+
+
+
+            Zhongli Wang
+   Application for Quantitative Researcher
+
+
+
+
+Address:        Astastrasse 22, 33617 Bielefeld, Germany
+Number:         +49 160 9541 6015
+Email:          nkwangzhongli@gmail.com
+                                                                                         Zhongli Wang
+                                                                                         Astastrasse 22
+                                                                                        33617 Bielefeld
+                                                                                              Germany
+
+Anson McCade
+Hong Kong
+
+Application for Quantitative Researcher, Fundamental/Alternative Data
+
+
+Dear Anson McCade Hiring Team,
+I am writing to apply for the Quantitative Researcher, Fundamental/Alternative Data position in
+Hong Kong. I am completing the final stage of my Ph.D. in Economics at Bielefeld University, with
+my defense scheduled for September 21, 2026, and I also hold an M.A. in Business and Economics
+with a Banking and Finance major and a B.Sc. in Finance. My background combines statistical
+modeling, Python-based computational research, financial data analysis, and machine learning.
+The role’s focus on cleaning fundamental or alternative datasets, researching factors, and testing
+models for equity index returns is closely aligned with how I work. In my doctoral research, I
+build computational models, estimate parameters, and test how market structure changes outcomes
+under uncertainty. In a published fraud detection project, I used accounting, financial, and market
+indicators with XGBoost and LightGBM to identify red flags in listed companies.
+I would bring the following strengths to the quantitative research mandate:
+  • Fundamental data research: Experience structuring accounting, financial, and market
+    indicators into model-ready datasets for supervised learning and empirical analysis.
+  • Python and R modeling: Advanced Python skills, plus R, Julia, Mathematica, and SQL
+    foundations for reproducible data processing, estimation, and robustness checks.
+  • Backtesting discipline: Training in econometrics, SMM, MCMC, and model validation,
+    with attention to out-of-sample testing, sensitivity checks, and interpretable results.
+  • LLM and workflow tools: Experience with AutoGen, LangChain, the OpenAI API, Claude
+    Code, Git, LaTeX, and research automation for documented analytical workflows.
+I am interested in this Hong Kong-based opportunity because it connects my finance training with
+practical factor research, portfolio analysis, and systematic testing. Although my previous work has
+been research-focused rather than a dedicated hedge-fund seat, the analytical core is directly relevant:
+preparing noisy datasets, testing predictive signals, validating model behavior, and communicating
+results clearly.
+Thank you for your time and consideration. I would welcome the opportunity to discuss how my
+research background, financial training, and coding experience can contribute to this Quantitative
+Researcher mandate.
+
+Sincerely,
+Zhongli Wang
+

@@ -36,7 +36,7 @@ try {
 
 Other pdf compilation commands:
 
-pdflatex -interaction=nonstopmode -file-line-error                                                 
+pdflatex -interaction=nonstopmode -file-line-error
 
 Use this command for the academic CV in `auto_cv_new`:
 

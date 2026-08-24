@@ -1,0 +1,121 @@
+\documentclass[11pt]{article}
+\usepackage{setspace}
+\usepackage[a4paper,margin=1in]{geometry}
+\geometry{margin=0.85in}
+\setstretch{1.0}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{ragged2e}
+
+\pagestyle{empty}
+\setstretch{1.0}
+
+\begin{document}
+
+
+% Title
+\begin{center}
+    {\Large \textbf{Job Application}} \\[3cm]
+    
+    {\Huge \textbf{Zhongli Wang}} \\[0.4cm]
+    
+    {\huge Additional Information for Jane Street}
+\end{center}
+
+\vspace{0.6cm}
+
+% Large picture in the middle
+\begin{center}
+    \IfFileExists{../zhongli-wang-profile.jpg}{
+        \includegraphics[
+            width=0.55\textwidth,
+            height=0.45\textheight,
+            keepaspectratio
+        ]{../zhongli-wang-profile.jpg}
+    }{
+        \vspace{0.45\textheight}
+    }
+\end{center}
+
+\vspace{0.7cm}
+
+% \vspace{3cm}
+
+
+% Personal details
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{>{\bfseries}p{4.2cm} p{8.5cm}}
+
+
+Address: & Astastrasse 22, 33617 Bielefeld, Germany \\
+
+Number: & +49 160 9541 6015 \\
+
+Email: & nkwangzhongli@gmail.com \\
+\end{tabular}
+\end{center}
+
+\vfill
+
+% \begin{center}
+%     \small Last updated: \today
+% \end{center}
+\newpage
+\enlargethispage{4\baselineskip}
+
+\begin{flushright}
+Zhongli Wang \\
+Astastrasse 22 \\
+33617 Bielefeld \\
+Germany \\
+\end{flushright}
+
+\vspace{0.1cm}
+
+\noindent
+Jane Street \\
+Hong Kong
+
+\vspace{0.1cm}
+
+\noindent
+Additional information for Jane Street \\
+
+\vspace{0.05cm}
+
+\noindent Dear Jane Street Hiring Team,
+
+I understand that Jane Street does not require a cover letter, so I am using this space only to add context that may help with reviewing my application. 
+I am completing the final stage of my Ph.D. in Economics at Bielefeld University, with my defense scheduled for September 21, 2026, 
+and I am looking for a quantitative research role where rigorous modeling, careful empirical testing, and collaborative problem solving sit close to real decisions.
+
+Jane Street interests me because the research culture described in the application process matches how I work. 
+I like problems where the first model is rarely the final answer, where asking better questions matters as much as using a more complex method, 
+and where researchers need to communicate clearly with people who see the same problem from different angles.
+
+My background is most relevant in three areas:
+
+\begin{itemize}
+    \item \textbf{Research judgment:} I build computational models of strategic behavior, estimate parameters, test assumptions, and revise when the evidence points elsewhere.
+    \item \textbf{Python and machine learning:} I use Python for modeling, data analysis, and machine learning, including a published financial fraud detection project using XGBoost.
+    \item \textbf{Finance and market intuition:} My M.A. and B.Sc. training covered banking, finance, quantitative finance, and financial engineering, while my Ph.D. research studies competition, network effects, and capacity constraints.
+\end{itemize}
+
+I first became interested in Jane Street through its public material on quantitative research and interviews, 
+which stood out for the emphasis on clear thinking, intellectual honesty, and learning from mistakes. 
+I am currently moving from doctoral research toward industry because I want my modeling and programming work to be tested against live, high-dimensional problems where the standard of evidence is demanding.
+
+Thank you for reviewing my application. 
+I would welcome the opportunity to discuss where my research background, financial training, and Python experience could be the strongest fit across Jane Street's teams and offices.
+
+\vspace{0.05cm}
+\noindent Sincerely, \\[0.08cm]
+\noindent Zhongli Wang \\[-0.2cm]
+
+\vspace{0.1cm}
+\noindent\includegraphics[width=2.7cm,keepaspectratio]{../Wang-sig.jpg}
+
+\end{document}
