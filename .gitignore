@@ -33,6 +33,8 @@ linkedin_Profile.pdf
 *.jpg
 *.jpeg
 *.png
+!.claude/skills/job-application-assistant/Job_Applications/New Jobs 2026/Wang-sig.jpg
+!.claude/skills/job-application-assistant/Job_Applications/New Jobs 2026/zhongli-wang-profile.jpg
 !cover_letters/OpenFonts/fonts/**
 
 # OS files
