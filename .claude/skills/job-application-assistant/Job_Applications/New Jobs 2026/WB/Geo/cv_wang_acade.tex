@@ -1,0 +1,458 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{\thepage} % page number in center of footer
+\renewcommand{\headrulewidth}{0pt} % remove header line
+\renewcommand{\footrulewidth}{0pt} % remove footer line
+
+
+
+
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+% \pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{\textbf{Zhongli Wang}} \\[7.5pt]
+PhD Candidate in Economics | Computational Modeling \& Data Science \\
+% \href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
+% \href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
+\\
+\href{mailto:nkwangzhongli@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ nkwangzhongli@gmail.com}\; %\ $|$ \ 
+\href{https://sites.google.com/view/zhongli-wang/}{\raisebox{-0.05\height}\faGlobe \ Personal Website}\; % \ $|$  
+\href{tel:+4916095416015}{\raisebox{-0.05\height}\faMobile \ +4916095416015} \\
+
+% \begin{center}
+% \begin{flush}
+% \small Updated: \today
+% \end{flushright}
+% \end{center}
+
+\end{tabularx}
+
+\definecolor{lightgray}{gray}{0.5}  % value between 0 (black) and 1 (white)
+\fancyfoot[R]{\small\textcolor{lightgray}{Updated: \today}}
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+PhD candidate in Economics with strong quantitative and computational modeling expertise. Extensive experience developing Python-based analytical frameworks, processing large-scale datasets, and implementing machine learning models (XGBoost, Random Forest, Neural Networks). Published research demonstrating ability to design data pipelines, perform spatial and temporal analysis, and translate complex analytical results into actionable insights. Strong background in agent-based modeling, parameter estimation, and data-driven analytics. Proven ability to work in international, multicultural environments across Europe and China, with excellent presentation and stakeholder communication skills.
+
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+
+Oct.\ 2021 -- present & \textbf{Bielefeld University} \& \textbf{Università Cattolica del Sacro Cuore} \\
+\textit{Bielefeld, Germany}& \textit{PhD in Economics} \\
+\textit{Milan, Italy} (Sept. 2022 & \textbullet\ EPOC Program (Marie Skłodowska-Curie Grant No.\ 956107) \\ % 
+-- Sept. 2023) & \textbullet\ Research Interests: Computational Economics, Industrial Organization, Heterogeneous Agents \\
+& \textbullet\ Thesis Topic: “Strategic Behavior and Economic Dynamics in ICT Markets: An Agent-Based Framework” \\[1.5ex] % [1.5ex]
+& \textcolor{blue}{Defense Date: Sept. 21, 2026} \\
+& \\
+
+
+Sept.\ 2018 -- Sept.\ 2021 & \textbf{University of Zurich} \\
+\textit{Zurich, Switzerland} & \textit{Master of Arts in Business and Economics} \hfill (magna cum laude) \\
+& \textbullet\ Major: Banking and Finance \\
+& \textbullet\ Minor: Data Science \\
+& \textbullet\ Thesis Topic: “An Approach to Identify the Financial Statement Frauds in the China Concepts Stock Market Using Financial Metrics and Machine Learning Methods” \\[1.5ex]
+& \\
+
+Sept.\ 2015 -- June 2018 & \textbf{Nankai University} \\
+\textit{Tianjin, China} & \textit{Bachelor of Science in Finance} \hfill (GPA: 4.39/5.0) \\ %[1.5ex]
+& \textbullet\ All courses related to Calculus: 85+/100 \\
+& \textbullet\ Financial Engineering: 95/100 \\
+& \textbullet\ Thesis Topic: “The Development of the `New Finance' in Gansu Province – Gansu Provincial Highway Aviation
+Tourism Financial Service Co. as an Example” \\
+& \\
+
+Sept.\ 2014 -- June 2018 & \textbf{Nankai University} \\
+\textit{Tianjin, China} & \textit{Bachelor of Arts in German Language and Literature} \hfill (GPA:5.0/5.0) \\ %[1.5ex]
+& \textbullet\ All courses related to “German Intensive”: 90+/100 \\
+& \textbullet\ Thesis Topic: “An Analysis about the thoughts of the inner world in works of Hermann Hesse: Taking “Siddhartha” and Hesse’s poems for examples” \\
+
+
+% If the line below is unrelated, consider removing or clarifying
+% 2021 & Class 10th Some Board \hfill  (Grades) \\
+
+\end{tabularx}
+
+%Experience
+\section{Research}
+
+\textbullet \;\textbf{Strategic Firm Capacity Selection under the Network Effects: A Computational Model of Capacity Investment Dynamics in the ICT Industry} (Job Market Paper) [\href{https://drive.google.com/file/d/1wa6D0VgsMyzZHyDrStmR7gF94wcbUio_/view?usp=sharing}{Link}] \\ [1.5ex]
+\textcolor{BlueViolet}{This paper develops an agent-based model of competing ICT firms that strategically adjust their physical R\&D investments in service capacity, rather than innovation, to manage congestion and meet consumer demand. It highlights how network effects and capacity constraints jointly shape profitability, product quality, and consumer behavior in digital markets.}
+
+\textbullet\ \textbf{Polytope Fraud Theory} (with Dongshuai Zhao, Florian Schweizer, Didier Sornette) \textit{International Review of Financial Analysis}, Volume 97, 2025. [\href{https://www.sciencedirect.com/science/article/pii/S1057521924006665?via%3Dihub}{Link}] \\ [1.5ex]
+\textcolor{BlueViolet}{This paper demonstrates advanced data processing and machine learning implementation using Python. The project involved designing data collection and processing pipelines, feature engineering from large-scale datasets, implementing and validating multiple ML models (XGBoost, Random Forest, SVM), and visualizing complex analytical results for diverse audiences—transferable skills for geospatial data analysis and environmental monitoring applications.}
+
+\textbullet\ \textbf{Agentic Workflows for Economic Research: Design and Implementation} (with Hankui Wang, Jiachen Yi, Herbert Dawid, Philipp Harting) [\href{https://arxiv.org/abs/2504.09736}{arXiv}]\\ [1.5ex]
+\textcolor{BlueViolet}{This paper demonstrates practical AI system architecture and deployment, implementing an agentic framework using Large Language Models (LLMs) and Microsoft's AutoGen. The work addresses AI infrastructure challenges including model orchestration, API integration, human-in-the-loop workflows, and scalable deployment patterns—directly relevant to building AI-ready government platforms and public service applications.}
+
+\textbullet\ \textbf{Heterogeneous Consumers and the Data Value Chain: An Agent-Based Approach} [\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5235196}{SSRN}]\\ [1.5ex]
+\textcolor{BlueViolet}{This paper analyzes digital infrastructure policy trade-offs, examining how data governance frameworks affect market dynamics and service delivery. The research addresses key policy questions around data sovereignty, cross-border data flows, and balancing security with digital economic development—critical considerations for governments designing national cloud and data hosting strategies.}
+
+\textbullet \;\textbf{Parameter Estimation Methods in an Agent-based Computational Model: Insights on ICT Industrial Dynamics and Policies} (Work in Progress)\\ [1.5ex]
+\textcolor{BlueViolet}{This paper develops scalable computational methods for calibrating complex systems using real-world data from major ICT providers (AT\&T, T-Mobile). The work combines traditional statistical methods with neural network surrogates to optimize model performance, demonstrating practical approaches to data-driven system design and performance tuning—applicable to cloud infrastructure optimization and AI model calibration.}
+
+\section{Conferences \& Workshops}
+% \begin{itemize}[noitemsep]
+% \end{itemize}
+
+% \begin{tabularx}{\linewidth}{@{}l X@{}}
+
+
+
+% \end{tabularx}
+
+
+
+% \section{Workshops}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+
+Oct.\ 2025 & Organizer and speaker, workshop on “AI Agents in Science” at Wissenswerkstadt Bielefeld \\
+
+Sept. -- Oct.\ 2024 & Speaker, the Tenth Meeting of the German Network for New Economic Dynamics (GENED 2024) \\
+
+Aug.\ 2024 & Speaker, the International Conference on Challenges in Managing Smart Products and Services \\
+
+July 2024 & Speaker, the 27th Annual Workshop on Economics with Heterogeneous Interacting Agents (WEHIA 2024) \\
+& Speaker, Economic Policy in Complex Environments Conference in Milan \\
+
+Mar.\ 2024 & Organization team member, the International EPOC Doctoral Workshop, Ca’ Foscari University of Venice \\
+
+Jan.\ 2024 & Speaker, the 9th World Congress of the International Microsimulation Association \\
+
+ & Speaker, Graz Schumpeter Summer School 2024 \\
+
+Oct.\ 2023 & Speaker, GENED 2023 \\
+
+June 2023 & Participant, ISEO Summer School \\
+
+Apr. -- Dec.\ 2022 & Organization team member and participant, 17th BiGSEM Workshop \\
+
+\end{tabularx}
+
+
+\section{Internships}
+
+% \begin{jobshort}{Research Assistant}{Aug. 2022 - Sept. 2022}
+Aug. 2022 -- Sept. 2022 \hfill \textbf{LucidMinds} \\ % Research Assistant
+\textit{Research Assistant} \hfill \textit{Amsterdam, Netherlands} \\
+\textbullet Developed and implemented computational models in \textit{Python} for the "DataVille 3000" project, focusing on system architecture, data processing pipelines, and translating model outputs into actionable insights for stakeholders.
+
+June 2019 -- June 2021 \hfill \textbf{University of Zurich} \\
+\textit{Research \& Teaching Assistant, Quantitative Business Administration} \hfill \textit{Zurich, Switzerland} \\
+\textbullet Developed and validated computational models and analytical frameworks for business applications using \textit{Mathematica}, focusing on system design and implementation. \\
+\textbullet Created teaching materials for Microeconomics, Corporate Finance, and Business Administration, demonstrating ability to translate complex technical concepts into accessible strategic guidance for diverse audiences. \\
+% \textbullet Supported research based on \textit{Mathematica} and improved teaching materials related to Microeconomics, Corporate Finance and Business Administration. \\
+
+
+Sept. 2017 -- Dec. 2017 \hfill \textbf{Continental Automotive Systems, Tianjin} \\
+\textit{HR Intern} \hfill \textit{Tianjin, China} \\
+% \textbullet Assisted with HR Specialist in hiring programs. Supported the recruitment of students. \\
+% \textbullet Arranged interviews for employees. Translated materials of English, German and Chinese. \\
+% \textbullet Helped with the procedure of reimbursement. \\
+\textbullet Supported recruitment initiatives by assisting in student hiring programs and coordinating interview logistics. \\
+\textbullet Translated internal HR materials across English, German and Chinese, facilitating multilingual communication. \\
+\textbullet Managed administrative tasks related to reimbursement processes, ensuring accuracy and compliance with internal procedures. \\
+
+
+July 2017 -- Aug. 2017 \hfill \textbf{Gansu Provincial Highway Aviation Tourism Financial Services Co.} \\
+\textit{Manager Assistant} \hfill \textit{Lanzhou, China} \\
+% \textbullet Grasped basic rules of operation of the backstage management system and completed editing work of materials in the range of compensation, the ending of guarantees, etc. \\
+% \textbullet Summarized documents of quartet agreements and promoted the approval of the documents and items of monthly loan of 2017 and checked accounts of the company. \\
+% \textbullet Cooperated with managers of the department in analyzing and clarifying cases in annual reports. \\
+\textbullet Learned the operational procedures of internal management systems and edited financial documents related to compensation and guarantees. \\
+\textbullet Reviewed and summarized quartet agreements to support approval processes for monthly loan items and assisted in account reconciliation. \\
+\textbullet Collaborated with department managers to analyze and interpret cases reported in annual financial statements. \\
+
+
+Aug. 2016 -- Sept. 2016 \hfill \textbf{Agricultural Bank of China, Gansu Branch} \\
+\textit{Manager Assistant} \hfill \textit{Lanzhou, China} \\
+% \textbullet Gained a general understanding of the operation of the bank system and the functions of different departments.\\
+% \textbullet Learned the profit statements of commercial bank and the basis of operating systems such as FMIS (Finance Management Information System) of the branch. \\
+\textbullet Developed foundational understanding of banking operations and departmental functions within a commercial bank setting. \\
+\textbullet Gained exposure to financial reporting and internal systems such as the Finance Management Information System (FMIS), with a focus on interpreting profit statements. \\
+
+
+June 2016 -- July 2016 \hfill \textbf{People’s Bank of China, Lanzhou Branch} \\
+\textit{Manager Assistant} \hfill \textit{Lanzhou, China} \\
+% \textbullet Involved in checking and approving report of financial status in Gansu Province and the report of regional branches. \\
+% \textbullet Got familiar with the operation of the monetary policies in provincial branch (provincial interest management policy, deposit reservation, and the practice of monetary policies such as relending and standing lending facilities).\\
+\textbullet Assisted in reviewing and verifying financial status reports for Gansu Province and its regional branches. \\
+\textbullet Gained familiarity with the implementation of monetary policy at the provincial level, including interest rate management, reserve requirements, and tools such as relending and standing lending facilities. 
+
+
+% \subsection*{Manager Assistant, People’s Bank of China, Lanzhou Branch}
+% June 2016 -- July 2016 \\
+% Reviewed financial status reports and monetary policy implementation.
+
+
+
+
+
+% \begin{joblong}{Designation}{Mar 2019 - Jan 2021}
+% \item long long line of blah blah that will wrap when the table fills the column width
+% \item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+% \end{joblong}
+  
+%Projects
+
+\section{Honors \& Awards}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2025 & \hfill Doctoral Completion Scholarship (Bielefeld Young Researchers’ Fund) \\
+
+2018 & \hfill Outstanding Graduate of Nankai University \\
+
+2017 & \hfill First Prize for Scholarship of Nankai University \\
+
+2016 & \hfill Second Prize, Contest of German Language Synchronisation for Beijing\&Tianjin Universities \\
+
+& \hfill Third Prize for the “2016 Blue Chips Plan” Financial Experts Challenge in team \\
+
+& \hfill NKU “Gong Neng” Scholarship \\
+
+\end{tabularx}
+
+% \section*{Skills}
+
+% \textbf{Programming \& Tools:} Python, R, Julia, Mathematica, LaTeX, Git, EViews  \\
+% \textbf{Simulation \& Estimation:} Agent-Based Modeling, SMM, MCMC, Machine Learning  \\
+% \textbf{Languages:} Mandarin (native), English (advanced), German (advanced), French/Italian/Japanese (basic)
+
+
+
+\section{Language Proficiency}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Native} & \hfill  \normalsize{Mandarin Chinese}\\
+\textbf{Advanced}  &  \hfill \normalsize{English, German}\\ 
+\textbf{Basics}  & \hfill \normalsize{French, Italian, Japanese}\\ 
+\end{tabularx}
+
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Programming \& Development}  &  \hfill \normalsize{Python (NumPy, pandas, scikit-learn), SQL, R, Julia, C\#}\\ 
+\textbf{AI/ML \& Deployment}  & \hfill \normalsize{XGBoost, Random Forest, Neural Networks, LLMs (AutoGen, LangChain), MLOps}\\ 
+\textbf{Infrastructure \& Tools}  & \hfill \normalsize{Cloud architectures, SQL databases, Git, Linux, API integration}\\ 
+\textbf{Data \& Analytics}  & \hfill \normalsize{Large-scale data pipelines, computational modeling, system optimization, \LaTeX}
+\end{tabularx} %   
+
+% \section{Software Skills}
+
+% \begin{tabularx}{\linewidth}{@{}lX@{}}
+% \textbf{Advanced:} & R, Mathematica, EViews, \LaTeX, Python, Julia \\
+% \textbf{Basic:}    & C\#, Stata, MATLAB, SQL, Linux \\
+% \end{tabularx}
+
+
+\section{Interests}
+
+Piano and Keyboard, Music Creation (GarageBand), Hulusi (Cucurbit Flute), Hiking, Table Tennis
+
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+% \section{Skills}
+
+\section{References}
+
+\begin{tabularx}{\linewidth}{@{}X X@{}}
+
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Prof. Herbert Dawid} \\
+Chair for Economic Theory and Computational Economics \\
+Bielefeld University \\
+\href{mailto:hdawid@uni-bielefeld.de}{hdawid@uni-bielefeld.de}
+\end{minipage}
+&
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Prof. Didier Sornette} \\
+Co-dean of Risks-X Institute \\
+Chair Professor \\
+Southern University of Science and Technology \\
+\href{mailto:dsornette@ethz.ch}{dsornette@ethz.ch}
+\end{minipage}
+\\[6em] % Row spacing
+
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Prof. Domenico Delli Gatti} \\
+Department of Economics and Finance \\
+Director of the Complexity Lab in Economics \\
+Università Cattolica del Sacro Cuore \\
+\href{mailto:domenico.delligatti@unicatt.it}{domenico.delligatti@unicatt.it}
+\end{minipage}
+&
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Prof. Karl Schmedders} \\
+Professor of Finance \\
+IMD Business School \\
+\href{mailto:karl.schmedders@imd.org}{karl.schmedders@imd.org}
+\end{minipage}
+
+\end{tabularx}
+% \center{\footnotesize Last updated: \today}
+
+\end{document}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+\end{tabularx}
+
+\section{Publications}
+\begin{refsection}[citations.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}

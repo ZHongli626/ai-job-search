@@ -1,0 +1,34 @@
+Zhongli Wang
+Astastrasse 22
+33617 Bielefeld, Germany
++49 160 9541 6015
+nkwangzhongli@gmail.com
+
+China Construction Bank Frankfurt Branch
+Corporate Banking Department
+Frankfurt am Main, Germany
+
+Application for Relationship Manager (m/f/d)
+
+Dear Hiring Manager,
+
+I am writing to apply for the full-time Relationship Manager position in the Corporate Banking Department at China Construction Bank Frankfurt Branch. I am completing a Ph.D. in Economics at Bielefeld University, with my defense scheduled for September 21, 2026, and I hold an M.A. in Business and Economics, majoring in Banking and Finance, as well as a B.Sc. in Finance. I am particularly interested in the opportunity to support corporate customers in a China-Europe banking environment while developing my career in corporate banking.
+
+My academic and practical background has trained me to examine financial information carefully, assess risks, and communicate complex findings clearly. In a published financial-statement fraud detection project, I analyzed accounting, financial, and market indicators and used machine learning models to identify potential red flags in listed companies. My doctoral research involves building computational models, estimating parameters, and analyzing how firms make strategic decisions under uncertainty. These experiences are directly relevant to retrieving and assessing company information, understanding business prospects and risks, supporting credit-related analysis, and preparing well-documented internal reports.
+
+I would bring the following strengths to CCB's corporate banking team:
+
+- Financial foundation: Banking and Finance training from the University of Zurich, a B.Sc. in Finance from Nankai University, and research experience involving financial statements, firm performance, and market data.
+
+- Analytical discipline: Advanced Python, R, Julia, Mathematica, SQL, econometrics, machine learning, and reproducible quantitative analysis. I am comfortable checking assumptions, reconciling information, and presenting evidence-based conclusions.
+
+- China-Europe communication: Mandarin Chinese, English, and German, together with academic and professional experience in China, Germany, Switzerland, Italy, and the Netherlands. My language background would support communication with Chinese and European corporate customers and internal stakeholders.
+
+- Responsibility and adaptability: Experience handling sensitive financial information, reviewing financial documents, supporting quantitative business administration, coordinating across teams, and learning unfamiliar technical domains quickly.
+
+I would bring a strong finance and analytical foundation, familiarity with financial documentation and risk-oriented analysis, and the motivation to develop these capabilities under experienced corporate banking professionals.
+
+Thank you so much for considering my application! I would welcome the opportunity to discuss how my finance education, quantitative research experience, language skills, and China-Europe perspective could contribute to China Construction Bank Frankfurt Branch.
+
+Yours sincerely,
+Zhongli Wang

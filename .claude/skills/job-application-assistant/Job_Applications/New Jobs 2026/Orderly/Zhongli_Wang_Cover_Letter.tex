@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+\usepackage{setspace}
+\usepackage[a4paper,margin=1in]{geometry}
+\geometry{margin=0.85in}
+\setstretch{1.0}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{ragged2e}
+
+\pagestyle{empty}
+\setstretch{1.05}
+
+\begin{document}
+
+
+% Title
+\begin{center}
+    {\Large \textbf{Job Application}} \\[3cm]
+    
+    {\Huge \textbf{Zhongli Wang}} \\[0.4cm]
+    
+    {\huge Application for Data Analyst Intern}
+\end{center}
+
+\vspace{0.6cm}
+
+% Large picture in the middle
+\begin{center}
+    \IfFileExists{../zhongli-wang-profile.jpg}{
+        \includegraphics[
+            width=0.55\textwidth,
+            height=0.45\textheight,
+            keepaspectratio
+        ]{../zhongli-wang-profile.jpg}
+    }{
+        \vspace{0.45\textheight}
+    }
+\end{center}
+
+\vspace{0.7cm}
+
+% \vspace{3cm}
+
+
+% Personal details
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{>{\bfseries}p{4.2cm} p{8.5cm}}
+
+
+Address: & Astastrasse 22, 33617 Bielefeld, Germany \\
+
+Number: & +49 160 9541 6015 \\
+
+Email: & nkwangzhongli@gmail.com \\
+\end{tabular}
+\end{center}
+
+\vfill
+
+% \begin{center}
+%     \small Last updated: \today
+% \end{center}
+\newpage
+\enlargethispage{4\baselineskip}
+
+\begin{flushright}
+Zhongli Wang \\
+Astastrasse 22 \\
+33617 Bielefeld \\
+Germany \\
+\end{flushright}
+
+\vspace{0.1cm}
+
+\noindent
+Orderly Network Hiring Team
+
+\vspace{0.15cm}
+
+\noindent
+\textbf{Application for Data Analyst Intern}
+
+\vspace{0.15cm}
+
+\noindent Dear Orderly hiring team,
+
+I am applying for the Data Analyst Intern position at Orderly. 
+I am completing a Ph.D. in Economics at Bielefeld University, with my defense scheduled for September 21, 2026, 
+and I hold an M.A. in Business and Economics with a major in Banking and Finance (minor in Data Science). 
+My background includes programming, financial data analysis, statistical modeling, and careful validation of complex datasets, 
+which I would bring to liquidity monitoring and trading-data operations.
+
+Orderly's focus on shared liquidity and orderbook-based trading infrastructure makes data quality especially important. 
+I would be motivated to support the liquidity operations team by cleaning and validating trading data, producing reliable weekly or monthly reports, 
+monitoring dashboards for anomalies, and documenting changes to market-parameter tables. 
+I would also bring a methodical approach to operational tasks that require accuracy while coordinating with product, trading, data, and market-maker teams.
+
+My experience supports this contribution in concrete ways:
+
+\begin{itemize}
+    \item \textbf{Analyze financial data:} In a published fraud-detection project, I worked with accounting, financial, and market indicators and applied XGBoost to identify potential red flags in listed companies.
+    \item \textbf{Build and test models:} My doctoral research uses computational models, parameter estimation, and simulation to study strategic firm behavior, market structure, and outcomes under uncertainty.
+    \item \textbf{Work reproducibly:} I use Python, R, Julia, Mathematica and SQL to process data, check assumptions, compare results, and communicate analytical findings clearly.
+    \item \textbf{Learn unfamiliar domains quickly:} My finance training and research in data-driven markets give me a strong foundation for learning liquidity mechanisms, incentive models, and Web3 trading operations.
+\end{itemize}
+
+I would approach the role with both relevant analytical experience and a willingness to learn Orderly's systems and market processes carefully. 
+I would welcome the opportunity to contribute reliable analysis and disciplined operational support while developing practical experience in decentralized trading infrastructure.
+
+Thank you so much for your consideration! I would welcome the opportunity to discuss how my quantitative background and data-analysis experience could support Orderly's liquidity operations.
+
+\vspace{0.1cm}
+\noindent Kind regards, \\
+\noindent Zhongli Wang
+
+\vspace{0.05cm}
+\IfFileExists{../Wang-sig.jpg}{\includegraphics[width=2.7cm,keepaspectratio]{../Wang-sig.jpg}}{}
+
+\end{document}
