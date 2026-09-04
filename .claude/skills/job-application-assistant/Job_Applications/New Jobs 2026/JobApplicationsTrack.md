@@ -56,3 +56,12 @@
 1. World Bank - E T Consultant - Cloud & Data Centers
 2. 
 
+## 20260902
+
+1. Anson McCade - ML Data Scientist - Global Quant Hedge Fund
+2. ManpowerGroup Hong Kong - Data Scientist (LLM)
+3. AS Watson - Senior Data Scientist
+4. Jump Trading - Quantitative Researcher | Trading team
+5. Argyll Scott - Data Analytics Manager - 40-50k (12 Month Contract)
+
+
