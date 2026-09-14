@@ -1,0 +1,694 @@
+\documentclass[10pt,aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{csquotes}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{comment}
+\usepackage{bbm}
+\usepackage{ragged2e}
+\apptocmd{\frame}{}{\justifying}{}
+
+\usepackage[backend=biber,sorting=nyt,natbib=true,style=authoryear,maxcitenames=2,maxbibnames=99,bibencoding=ascii]{biblatex}
+\addbibresource{references.bib}
+
+\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
+\DeclareMathOperator{\EX}{\mathbb{E}}
+
+\newtheorem{thm}{Theorem}[theorem]
+
+\title[Strategic Behavior in ICT Markets]{Strategic Behavior and Economic Dynamics in ICT Markets: An Agent-Based Framework}
+
+\author[Z. Wang]{Zhongli Wang}
+
+\institute[Bielefeld Univ.; Univ. Cattolica]{%
+  Bielefeld University\\[4mm]
+  Università Cattolica del Sacro Cuore\\[6mm]
+  \small Supervisors: Prof. Dr. Herbert Dawid, Prof. Dr. Domenico Delli Gatti
+}
+
+\date{September 3, 2026}
+
+\usetheme[
+  lelofont=false,
+  smallmargins,
+  authorinfoot,
+  titleinfoot,
+  totalframes,
+  mylogoinfoot=false,
+  logoinfoot=false,
+  department=none,
+  departmentlang=none,
+  institutelang=none
+]{IMW}
+
+
+\begin{document}
+
+\begin{frame}
+  \vfill
+  \begin{center}
+    {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
+    \vspace{1.4em}
+    {\small\itshape Ph.D. Defense\par}
+    \vspace{0.8em}
+    {\usebeamerfont{author}\insertauthor\par}
+    \vspace{0.8em}
+    {\usebeamerfont{institute}\insertinstitute\par}
+    \vspace{0.8em}
+    {\usebeamerfont{date}\insertdate\par}
+  \end{center}
+  \vfill
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+    \includegraphics[width=0.82\textwidth]{logos/epoc_logo_0002.png}
+    \end{center}
+    \vspace{0.8em}
+
+    This work has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 956107, ``Economic Policy in Complex Environments (EPOC)''.
+\end{frame}
+
+\begin{frame}{Outline}
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Thesis Goals}
+\begin{itemize}
+    \item \textbf{Bridging Agent-Based Modeling and Industrial Dynamics}
+    \begin{itemize}
+        \item[-] Apply statistical inference techniques from ABMs to industrial dynamic models
+        \item[-] Leverage bottom-up microfoundations to capture emergent behavior
+    \end{itemize}
+    
+    \vspace{2mm}
+    \item \textbf{Addressing ICT Industry Complexities}
+    \begin{itemize}
+        \item[-] Platform competition, data restrictions, user experience, capacity constraints
+        \item[-] Gaps in theoretical and empirical literature at the meso-level
+    \end{itemize}
+    
+    \vspace{2mm}
+    \item \textbf{Three-Paper Structure}
+    \begin{itemize}
+        \item[-] \textit{Paper 1:} Data restriction policies and their impact on firm profits and social welfare
+        \item[-] \textit{Paper 2:} Consumer networks, congestion effects, and firm capacity selection
+        \item[-] \textit{Paper 3:} Empirical calibration using real-world telecom data (AT\&T, T-Mobile)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Thesis Summary}
+\small
+\textbf{Paper 1: Data Restrictions \& Firm Competition}
+\begin{itemize}
+    \item \textbf{RQ:} How do data restriction levels influence price formation and market structures in software markets?
+    \item \textbf{Contribution:} Consumer preferences and cross-regional cooperation drive welfare; dynamic investment analysis reveals insights beyond static equilibrium
+\end{itemize}
+
+\vspace{2mm}
+\textbf{Paper 2: Capacity Selection \& Network Effects}
+\begin{itemize}
+    \item \textbf{RQ:} How do service capacity constraints, congestion, and consumer networks jointly shape firm competition in ICT markets?
+    \item \textbf{Contribution:} Physical R\&D investment dynamics and network-driven demand interactions determine market outcomes and profitability
+\end{itemize}
+
+\vspace{2mm}
+\textbf{Paper 3: Empirical Calibration Methods}
+\begin{itemize}
+    \item \textbf{RQ:} How can agent-based models be effectively calibrated using real-world data, and which methods are most suitable?
+    \item \textbf{Contribution:} SMM and NN surrogate complement each other; price-adjustment parameter $\xi$ identified as most influential firm control
+\end{itemize}
+\end{frame}
+
+\section{Paper 1 - Heterogeneous Consumers, Firm Competition and the Data Value Chain: An Agent-based Approach}
+
+\begin{frame}{Paper 1: Motivation}
+\begin{itemize}
+    \item \textbf{Software as a unique product:} Unlike traditional goods, software is intangible, relies on information systems, and operates under complex licensing mechanisms
+    
+    \vspace{2mm}
+    \item \textbf{Regional variations:} Pricing and availability differ across regions due to variations in local data regulations
+    
+    \vspace{2mm}
+    \item \textbf{Regulatory impact:} Data restrictions influence market structures, competitive strategies, and consumer welfare
+    
+    \vspace{2mm}
+    \item \textbf{Policy challenge:} Need for balanced regulatory frameworks that support both market efficiency and consumer protection
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Research Questions}
+\begin{itemize}
+    \item \textbf{Regulatory Impact on Market Dynamics:}  
+    How do varying levels of data restrictions influence economic activities and welfare in software markets over time?
+
+    \vspace{2mm}
+    \item \textbf{Strategic Firm Behavior:}  
+    How do software owners adjust their strategies in response to evolving regulatory landscapes?
+
+    \vspace{2mm}
+    \item \textbf{Price Formation:}  
+    What role does the data restriction level play in shaping price formation and market structures?
+
+    \vspace{2mm}
+    \item \textbf{Policy Design:}  
+    What regulatory framework best balances the local firm's profits and the global welfare?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Literature Review}
+\begin{itemize}
+    % \item \textbf{Global and Data Value Chains:} GVCs shape international trade and production patterns, while DVCs represent fundamentally new business models in digital markets \citep{Kano2020GlobalLiterature, Antras2021GlobalChains, Dawid2021IntroductionModel, UNCTAD2021DigitalFlow}
+    
+    % \vspace{2mm}
+    \item \textbf{Digitalization and software economics:} Digitalization shifts costs in search, replication, and verification, creating distinct economic properties for software products \citep{Goldfarb2017DigitalEconomics, Dawid2022SmartIntroduction}
+    
+    \vspace{2mm}
+    \item \textbf{Spatial competition models:} Hotelling framework analyzes how product differentiation and location choices affect market competition \citep{Hotelling1929StabilityCompetition, Guo2015AProduction}
+    
+    % \vspace{2mm}
+    % \item \textbf{Cross-border data flows:} Data restrictions influence trade patterns and economic activities across regions \citep{Ferracane2018, Bauer2016TracingLocalization, Aaronson2018DataFlows}
+\end{itemize}
+
+\vspace{1mm}
+\begin{block}{Research Gap}
+Limited understanding of how data restrictions dynamically interact with firm strategies and heterogeneous consumer preferences
+\end{block}
+\end{frame}
+
+\begin{frame}{Paper 1: Model}
+\begin{itemize}
+    \item \textbf{Two-fold approach:} Combining game theory and agent-based modeling
+    
+    \vspace{2mm}
+    \item \textbf{Key agents:}
+    \begin{itemize}
+        \item[-] Software owners (firms)
+        \item[-] Consumers with heterogeneous preferences
+        \item[-] Government/regulatory authority
+    \end{itemize}
+    
+    \vspace{2mm}
+    \item \textbf{Model features:}
+    \begin{itemize}
+        \item[-] Strategic behavior of firms under regulatory constraints
+        \item[-] Consumer decision-making processes
+        \item[-] Dynamic pricing and investment mechanisms 
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Methodology}
+\begin{itemize}
+    \item \textbf{Game-theoretic foundation:} Formal analysis of strategic interactions under different regulatory regimes
+    
+    \vspace{2mm}
+    \item \textbf{Agent-based simulations:} Computational experiments to explore emergent market dynamics
+    
+    \vspace{2mm}
+    \item \textbf{Scenario analysis:} Comparing outcomes under varying levels of data restrictions
+    
+    \vspace{2mm}
+    \item \textbf{Welfare analysis:} Evaluating impacts on consumer surplus, firm profits, and social welfare
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Mechanism - Consumer Utility}
+\textbf{Consumer utility} for software of Owner $i$:
+\begin{equation*}
+    u_{j,i} (\theta_i, c_{res,i}, p_{i}) = \overline{u}_{j,i} + x_{j} \theta_i + y_{j} c_{res,i} - p_{i} 
+\end{equation*}
+
+\vspace{3mm}
+\begin{itemize}
+    \item $x_j$, $y_j$: heterogeneous consumer tastes for functionality and data restriction
+    \item $(x_j, y_j) \sim F(x,y)$: joint distribution captures consumer diversity
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Mechanism - Firm Optimization}
+\textbf{Firm profit:}
+\begin{equation*}
+    \Pi_i = m_i \cdot (p_{i} - c_{res,i}) - f_{i} (c_{0,i})
+\end{equation*}
+
+\vspace{3mm}
+\textbf{Optimization problem:}
+\begin{equation*}
+\begin{aligned}
+    \max\limits_{{c_{0,i}, p_{i}}} \; \Pi_i & = m_i  p_{i} - c_{total,i}\\
+    s.t. \; \theta_i & = \overline{\theta}_i + \Delta p_{i} (c_{0,i}) \\
+    c_{total, i} & = f_{i} (c_{0,i}) + m_i  c_{res,i}
+\end{aligned}
+\end{equation*}
+
+\vspace{3mm}
+\begin{itemize}
+    \item Market demand $m_i$ is derived from agent-based simulations
+    \item Firms choose investment $c_{0,i}$ and price $p_i$
+    \item Data restriction cost $c_{res,i}$ is variable (scales with user base)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 1: Results - Multi-stage Game}
+\begin{figure}[H]
+    \centering
+    \subfigure[Owner $a$, $(0,0)$]{\includegraphics[width=0.6\textwidth]{../defense/bilder/paper1-heatmap.png}}
+
+    \caption{Profits of firm $a$ based on equilibrium prices under different investment combinations for scenarios $(c_{res,a}, c_{res,b}) = (0,0)$.}
+    \label{fig:ch1-app-profits-dist3-basic}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Paper 1: Results - ABM}
+\begin{figure}[H]
+    \centering
+    \subfigure[]{\includegraphics[width=0.4\textwidth]{../Paper01/time_series_generated231210/Dist01/diff03_prf.png}}
+    \hspace{3mm}
+    \subfigure[]{\includegraphics[width=0.4\textwidth]{../Paper01/time_series_generated231210/Dist03/dist03_diff03_prf.png}}
+    \caption{Profit difference $\Pi_{a} - \Pi_{b}$ across 30 time series with $c_{res,a} = 0, c_{res,b} = 10$ under (a) Dist. I and (b) Dist.II.}
+    \label{fig:profit-diff-dist1}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Paper 1: Conclusion}
+\begin{itemize}
+    \item \textbf{Consumer taste distribution:} Indifferent consumers $\rightarrow$ low-restriction firm dominates; restriction-favoring consumers $\rightarrow$ intense competition
+    
+    \vspace{2mm}
+    \item \textbf{Cross-regional cooperation:} Lower restrictions $\rightarrow$ higher consumer welfare and firm profits
+    
+    \vspace{2mm}
+    \item \textbf{Product differentiation:} Regional restriction differences benefit both firms
+    \end{itemize}
+\end{frame}
+
+\section{Paper 2 - Strategic Firm Capacity Selection under the Network Effects: A Computational Model of Capacity Investment Dynamics in the ICT Industry}
+\begin{frame}{Paper 2: Motivation}
+
+\begin{alertblock}{Research Goal}
+Paper 1 explored how data restrictions shape firm competition. Beyond that, \textbf{service capacity} and \textbf{consumer networks} are also key drivers of market dynamics in digital markets, which are the focus of Paper 2.
+\end{alertblock}
+
+\begin{itemize}
+    \item \textbf{Congestion in ICT products:} Rising user numbers $\rightarrow$ declining client experience (video conferencing, e-commerce, telecom)
+    
+    \vspace{2mm}
+    \item \textbf{Systemic service failures:} Single point of failure disrupts multiple services (e.g., 2017 Amazon S3 outage)
+    
+    \vspace{2mm}
+    \item \textbf{Consumer networks \& R\&D:} Interaction patterns amplify or weaken perceived quality gains
+\end{itemize}
+\end{frame}
+  
+    
+\begin{frame}{Paper 2: Research Questions}
+\begin{itemize}
+    \item \textbf{Strategic Service Capacity:}  
+    How does service capacity shape firm competition in a duopoly?
+
+    \vspace{2mm}
+    \item \textbf{Drivers of Capacity Choice:}  
+    Which factors (e.g., congestion, network effects) influence firms’ strategic service decisions and resulting market structures?
+
+    \vspace{2mm}
+    \item \textbf{Firm Behavior \& Market Outcomes:}  
+    How should firms adjust pricing and physical R\&D investment to respond to consumer behavior and maximize outcomes?
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 2: Literature Review}
+\begin{itemize}
+    \item \textbf{Strategic capacity selection}\; (\citet{Katz1986ProductProgress}; \citet{Besanko2004CapacitySize}; \citet{Ahuja2016NetworkNetworks}; \citet{Levistky2022StudyNetworks})
+    \item \textbf{Consumer behavior and consumer network effect}\; (\citet{Watts1998CollectiveNetworks}; \citet{Jackson2007DiffusionGames};  \citet{Jackson2011AnApplications})
+\end{itemize}
+
+\vspace{1mm}
+\begin{block}{Research Gap}
+Limited understanding of how congestion effects and consumer heterogeneity jointly shape firm capacity decisions and market outcomes in networked ICT markets
+\end{block}
+\end{frame}
+
+\begin{frame}{Paper 2: Model Setup}
+\begin{itemize}
+    \item \textbf{Agents:} Two firms (duopoly) and $n$ heterogeneous consumers on a network
+    \item \textbf{Firm decisions:} Physical R\&D investment $c_{0,i,t}$ and price $p_{i,t}$
+    \item \textbf{Service capacity:} $\chi_{i,t+\tau} \propto \log(c_{0,i,t} + 1)$ (congestion when demand exceeds capacity)
+    \item \textbf{Consumer utility:} Depends on product quality, price, network effects, and congestion
+    % \item \textbf{Network structure:} Small-world network enabling information diffusion
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 2: Two-Stage Game}
+\textbf{Sequential game:} Firms decide simultaneously within each stage.
+\begin{enumerate}
+    \item \textbf{Stage 1:} Each firm $i \in \{a, b\}$ chooses physical R\&D investment $c^{Phy}_{0,i}$, which determines service capacity $\chi_{i}$.
+    \item \textbf{Stage 2:} Each firm $i$ sets price $p_{i}$, given $(\chi_a, \chi_b)$.
+\end{enumerate}
+\vspace{2mm}
+\textbf{Profit maximization} (assuming $\Delta\chi = \chi_a - \chi_b > 0$):
+\begin{equation*}
+\begin{aligned}
+    \max_{p_a} \;\Pi_a & = (1-\hat{x})\,p_a - c^{Phy}_{0,a} \\
+    \max_{p_b} \;\Pi_b & = \hat{x}\,p_b - c^{Phy}_{0,b}
+\end{aligned}
+\end{equation*}
+where $\hat{x}$ is the consumer threshold dividing market demand between the two firms.
+\end{frame}
+
+\begin{frame}{Paper 2: Results - Multi-stage Game}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{../Paper02/graphs2_game/Exp_case_2_240521_const_tech_10_1/two_stage_chi_10_1_pi_a.png}
+    % \hspace{20mm}
+    % \subfigure[]{\includegraphics[width=0.3\textwidth]{../Paper02/graphs2_game/Exp_case_2_240521_const_tech_10_1/two_stage_chi_10_1_pi_b.png}}
+    \caption{Profits of firm $a$ based on equilibrium prices under different investment combinations.} % \beta_1 = 0.5, 
+    \label{fig:ch2-two-stage-s10}
+\end{figure}    
+\end{frame}    
+
+\begin{frame}{Paper 2: Key Mechanisms}
+\textbf{Network structure:} Small-world network enabling information diffusion.
+
+\begin{itemize}
+    \item \textbf{Congestion effect:} Quality $\theta_{i,t}$ declines when demand $m_{i,t}$ exceeds capacity $\chi_{i,t}$
+    
+    \vspace{2mm}
+    \item \textbf{Network effect:} Consumer utility increases with network size: $+\beta_4 \frac{m_{i,t}}{n}$
+    
+    \vspace{2mm}
+    \item \textbf{Firm heuristics:} Myopic profit-based investment adjustments with exploration
+    
+    \vspace{2mm}
+    \item \textbf{Consumer dynamics:} Information diffusion through small-world network influences switching decisions
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 2: Model Dynamics}
+\begin{figure}[H]
+    \centering
+    \subfigure[]{\includegraphics[scale = 0.2]{../Paper02/graphs2_network/swn00/smw00_0.png}}
+    \subfigure[]{\includegraphics[scale = 0.2]{../Paper02/graphs2_network/swn00/smw00_1.png}}
+    \subfigure[]{\includegraphics[scale = 0.2]{../Paper02/graphs2_network/swn00/smw00_2.png}}
+    \caption{Example network dynamics.}
+    \label{fig:enter-label}
+\end{figure}
+\end{frame}    
+
+\begin{frame}{Paper 2: Results - ABM}
+\begin{figure}[H] % Fig22
+    \centering
+    \includegraphics[width=0.7\linewidth]{bilder/paper2-abm.png}   
+    \caption{Example market dynamics with consumer congestion and network effects. $A_a = 1.2, A_b = 1$.}
+    \label{fig:enter-label}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Paper 2: Conclusion}
+\begin{itemize}
+    \item \textbf{Investment strategy:} Frequent investments $\neq$ higher profits; balance investment frequency with market conditions
+    
+    \vspace{2mm}
+    \item \textbf{Service capacity:} Quality driver and differentiation tool, not just production constraint; over-investment $\rightarrow$ congestion degradation
+
+    \vspace{2mm}
+    \item \textbf{Network \& congestion effects:} Network amplifies concentration; congestion limits dominant firm profitability; non-additive interaction
+
+    \vspace{2mm}
+    \item \textbf{Strategic trade-offs:} Technological edge enables dominance; smaller firms compete via pricing flexibility
+\end{itemize}
+\end{frame}    
+
+\section{Paper 3 - Parameter Estimation Methods in an Agent-based Computational Model: Insights on ICT Industrial Dynamics and Policies}
+
+\begin{frame}{Paper 3: Motivation}
+\begin{alertblock}{Research Goal}
+Paper 2 builds a theoretical model, yet how do we ensure it reflects real-world ICT market dynamics? Paper 3 addresses this by grounding the model in empirical data and exploring calibration methods.
+\end{alertblock}
+
+\begin{itemize}
+    \item \textbf{Calibration challenge:} Parameter estimation and validation remain major challenges in agent-based modeling
+    
+    \vspace{2mm}
+    \item \textbf{Model credibility:} Need to bridge the gap between theoretical ABMs and real-world applications
+    
+    \vspace{2mm}
+    \item \textbf{Industry-specific data:} Leveraging firm-level data from U.S. telecom sector (AT\&T, T-Mobile)
+    
+    \vspace{2mm}
+    \item \textbf{Methodological advancement:} Comparing state-of-the-art estimation techniques for ABM calibration
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 3: Research Questions}
+\begin{itemize}
+    \item \textbf{Calibration Methods:}  
+    Which estimation techniques are most suitable for calibrating agent-based models to real-world data?
+
+    \vspace{2mm}
+    \item \textbf{Model Validity:}  
+    How can we validate ABM predictions against empirical observations from the telecom industry?
+
+    \vspace{2mm}
+    \item \textbf{Parameter Identification:}  
+    What are the key parameters that drive model behavior and how can they be reliably estimated?
+
+    \vspace{2mm}
+    \item \textbf{Practical Implications:}  
+    How do calibrated models enhance our understanding of real ICT market dynamics?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 3: Literature Review - Model Selection \& Parameter Estimation}
+
+% \begin{itemize}
+%     \item Agent-based models (ABMs) simulate emergent economic behavior and support model-based inference \citep{DawidDelliGatti2018, Axtell2022Agent-BasedFuture}.
+%     \item Estimation methods fall into two broad categories:
+% \end{itemize}
+
+% \vspace{0.5em}
+
+\begin{columns}
+    \column{0.48\textwidth}
+    \begin{block}{Frequentist Methods}
+    \begin{itemize}
+        \item Simulated Minimum Distance \citep{Grazzini2015EstimationDistance}
+        \item Simulated Method of Moments \citep{Grazzini2015EstimationDistance}
+        \item Statistical Model Checking \citep{Vandin2022AutomatedModels}
+        \item Simulated Maximum Likelihood \citep{Kukacka2023EstimationModels}
+    \end{itemize}
+    \end{block}
+
+    \column{0.48\textwidth}
+    \begin{block}{Bayesian Methods}
+    \begin{itemize}
+        \item Kernel-based Likelihood \citep{DelliGatti2020RisingModels}
+        \item Bayesian Maximum Likelihood \citep{Gao2022BehavioralApproach}
+        \item DNN-based Inference \citep{Platt2022BayesianNetworks}
+    \end{itemize}
+    \end{block}
+
+\end{columns}
+
+\vspace{2mm}
+\begin{alertblock}{Research Gap}
+Limited empirical validation of calibration methods for telecom duopoly models with real-world data; unclear which approach best captures firm behavior and market dynamics
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Paper 3: Methodology}
+\begin{itemize}
+    \item \textbf{Data preparation:}
+    \begin{itemize}
+        \item[-] Data collection from official firm websites, Statista, and Refinitiv
+        \item[-] Temporal disaggregation: Annual/quarterly to monthly data
+        \item[-] Target variables: Revenue, demand, costs, profits
+    \end{itemize}
+    
+    \vspace{2mm}
+    \item \textbf{Calibration approach:}
+    \begin{itemize}
+        \item[-] Latin Hypercube Sampling for parameter space exploration
+        \item[-] Batch processing for computational efficiency
+        \item[-] 16 target parameters including network effects, congestion, investment dynamics
+    \end{itemize}
+    \vspace{2mm}
+
+    \item \textbf{Simulated Method of Moments (SMM):}
+    \begin{itemize}
+        \item[-] Match simulated moments to empirical moments from real data
+        \item[-] Minimize loss function (Normalized Root Mean Square Error)
+    \end{itemize}
+
+    \vspace{2mm}
+    \item \textbf{NN Surrogate:}
+    \begin{itemize}
+        \item[-] Neural network trained to approximate the ABM: maps 21 parameters $\rightarrow$ $\mathrm{NRMSE}_{\mathrm{avg}}$
+        \item[-] Enables gradient-based search (Adam optimizer) and efficient re-use of simulation data
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paper 3: Loss Function - NRMSE}
+
+\textbf{Goal:} Measure how closely the simulated series $Y_t^S$ tracks the empirical series $Y_t^R$ over the post-burn-in window $t = b,\ldots,T-1$:
+
+\[
+\mathrm{NRMSE}
+= \frac{\displaystyle\sqrt{\dfrac{1}{T-b}\sum_{t=b}^{T-1}\left(Y_t^{S}-Y_t^{R}\right)^2}}{\max_t Y_t^{R} - \min_t Y_t^{R}}
+\]
+
+\vspace{3mm}
+\textbf{Overall calibration objective} (averaged across prices, investments, consumers, profits; both firms $i \in \{a,b\}$):
+
+\[
+\mathrm{NRMSE}_{\mathrm{avg}}
+= \frac{1}{8}\sum_{i\in\{a,b\}}
+\left(
+\mathrm{NRMSE}_{p_i}+
+\mathrm{NRMSE}_{c_{0,i}}+
+\mathrm{NRMSE}_{m_i}+
+\mathrm{NRMSE}_{\Pi_i}
+\right)
+\]
+
+\vspace{2mm}
+{\small A smaller $\mathrm{NRMSE}_{\mathrm{avg}}$ indicates a better overall fit to the empirical data.}
+\end{frame}
+
+\begin{frame}{Paper 3: Results - Example Calibration} % continue from here!!
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{bilder/paper3-abm.png}
+    \caption{Real and simulated time series with best-fit parameters within the samples.}
+    \label{fig:timeseries-within-sample}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Paper 3: Results - Parameter Estimates}
+\small{
+\begin{table}[H]
+\centering
+\begin{tabular}{lcccc}
+\hline
+\textbf{Parameter} & \textbf{WS (21)} & \textbf{WS (21)} & \textbf{WS (10)} & \textbf{NN Surr.\ (10)} \\
+\textbf{Metric} & $\mathrm{NRMSE}_{\mathrm{avg}}$ & $\overline{\mathrm{NRMSE}}_{\mathrm{avg}}$ & $\overline{\mathrm{NRMSE}}_{\mathrm{avg}}$ & $\overline{\mathrm{NRMSE}}_{\mathrm{avg}}$ \\
+\hline
+$\beta_2$              & 6.393  & 1.346  & 5.483  & 2.856  \\
+$\beta_0$              & 0.366  & 0.044  & 0.109  & 0.100  \\
+$A_a$                  & 1.022  & 1.296  & 1.219  & 1.157  \\
+$p_{sw}$               & 0.0815 & 0.0391 & 0.0518 & 0.0720 \\
+\textbf{$\xi_a$}       & \textbf{0.4090} & \textbf{0.0674} & \textbf{0.4090} & \textbf{0.4090} \\
+\textbf{$\xi_b$}       & \textbf{0.3983} & \textbf{0.0783} & \textbf{0.0627} & \textbf{0.100}  \\
+$\eta_a$               & 1580.03 & 293.05 & 103.31 & 100.00 \\
+$\eta_b$               & 785.32  & 965.85 & 785.32 & 785.32 \\
+$\tau_a$               & 12     & 11     & 12     & 12     \\
+$\tau_b$               & 16     & 32     & 29     & 34     \\
+\hline
+\end{tabular}
+\caption*{WS = Within-sample. Rows with near-identical estimates across methods omitted. \\ $\xi$ rows \textbf{bolded}: highest feature importance.}
+\end{table}
+}
+\end{frame}
+
+
+\begin{frame}{Paper 3: Conclusion}
+\begin{itemize}
+    \item \textbf{Empirical grounding:} Real-world U.S. telecom data linked to IO-oriented ABM with heterogeneous consumers, congestion, and network effects
+
+    \vspace{2mm}
+    \item \textbf{Complementary calibration:} SMM matches moments; NN surrogate enables efficient re-use, gradient search, and out-of-sample validation
+
+    \vspace{2mm}
+    \item \textbf{Key finding:} Price-adjustment parameter $\xi$ most influential for firm control across policy analysis and optimization
+
+    \vspace{2mm}
+    \item \textbf{Model validation:} Calibrated model reproduces observed market stylized facts, confirming empirical relevance
+\end{itemize}
+\end{frame}
+
+\begin{frame}{General Conclusion}
+\begin{itemize}
+    \item \textbf{Paper 1:} Consumer taste distribution shapes competitive outcomes; cross-regional cooperation benefits all
+    \item \textbf{Paper 2:} Capacity and network effects drive non-additive competitive dynamics; strategic flexibility matters
+    \item \textbf{Paper 3:} SMM and NN surrogate complement each other; $\xi$ parameter most influential for firm control
+\end{itemize}
+\vspace{3mm}
+
+\centering
+Any suggestions or comments are welcome!
+
+\end{frame}
+
+\section{Appendix}
+\begin{frame}{Paper 1: Results - ABM}
+\begin{figure}[H]
+    \centering
+    \subfigure[]{\includegraphics[width=0.23\textwidth]{../Paper01/time_series_generated231210/Dist01/diff01_prf.png}} 
+    \hspace{3mm}
+    \subfigure[]{\includegraphics[width=0.23\textwidth]{../Paper01/time_series_generated231210/Dist01/diff02_prf.png}}\\ 
+    \subfigure[]{\includegraphics[width=0.23\textwidth]{../Paper01/time_series_generated231210/Dist01/diff03_prf.png}}
+    \hspace{3mm}
+    \subfigure[]{\includegraphics[width=0.23\textwidth]{../Paper01/time_series_generated231210/Dist01/diff04_prf.png}}
+    \caption{Profit difference $\Pi_{a} - \Pi_{b}$ across 30 time series (Dist. 1) under different scenarios.}
+    \label{fig:profit-diff-dist1}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Paper 1: Results - ABM}
+\begin{figure}[H] % here we have more realizations now
+    \centering
+    \subfigure[]{\includegraphics[width=0.23\textwidth]{../Paper01/time_series_generated231210/Dist03/dist03_diff01_prf.png}} 
+    \hspace{3mm}
+    \subfigure[]{\includegraphics[width=0.23\textwidth]{../Paper01/time_series_generated231210/Dist03/dist03_diff02_prf.png}}\\ 
+    \subfigure[]{\includegraphics[width=0.23\textwidth]{../Paper01/time_series_generated231210/Dist03/dist03_diff03_prf.png}}
+    \hspace{3mm}
+    \subfigure[]{\includegraphics[width=0.23\textwidth]{../Paper01/time_series_generated231210/Dist03/dist03_diff04_prf.png}}
+    \caption{Difference of $\Pi_{a}$ and $\Pi_{b}$ across 30 time series (Dist. 3) under different scenarios.}
+    \label{fig:profit-diff-dist3}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Paper 2: Results - ABM}
+\begin{figure}[H] % Fig22
+    \centering
+    \includegraphics[width=0.4\linewidth]{../Paper02/new_fig_22_1.png}   
+    \caption{Market dynamics under different $\xi_i$ ($i\in \{a, b\}$). ``NW'' represents the market setting with only network effect, and ``NW+CONG'' represents the market setting with both network effect and congestion effect. $A_a = 1.2, A_b = 1$.}
+    \label{fig:enter-label}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Paper 3: Results - Example Calibration} % continue from here!!
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\linewidth]{../Paper03/results_251015/validation_results_with_CI_lowest_label.png}
+    \caption{Real and simulated time series with best-fit parameters within the samples.}
+    \label{fig:timeseries-within-sample}
+\end{figure}
+\end{frame}
+
+% \begin{frame}[allowframebreaks]{Reference}
+% %		\footnotesize{
+% 		\printbibliography
+% %		}
+% \end{frame}    
+
+\end{document}
+
