@@ -1,0 +1,945 @@
+\mode<presentation>
+
+% Package Requirements
+\RequirePackage{etoolbox}
+\RequirePackage{graphicx}
+\RequirePackage{tcolorbox}
+\RequirePackage{tikz}
+% Load required libaries of the packages
+\tcbuselibrary{skins,hooks}
+% Font changes
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+% Required to fix math operator sizes
+\RequirePackage{fixcmex}
+% Required to make math font the default sans serif font (later: Lelo)
+\RequirePackage{fix-cm}
+\RequirePackage{sfmath}
+% Fix Tilde as mathaccent (second line for amsmath)
+\renewcommand{\tilde}{\mathaccent"767E }
+\renewcommand{\tilde}{\protect\mathaccentV{tilde}67E}
+% Required to make importing Lelo robust
+\RequirePackage{iftex}
+% Required to fix ligatures
+\RequirePackage{microtype}
+\DisableLigatures{encoding=T1}
+
+
+%% Theme options documentation
+%%
+%% Font options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% `lelofont': bool [default: true]
+%%     If true, sets Lelo as the default font family.
+%%
+%%
+%% Inner theme options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% `sectiontoc' : bool [default: false]
+%%     If `sectiontoc' is true, at the beginning of every section the TOC is
+%%     repeated with the current section highlighted.
+%%
+%%
+%% `institute' : str {'IMW', 'CUDE', 'BiGSEM'} [default: 'IMW']
+%%     Defines the institute or project logo used as `mylogo'. Corresponds to
+%%     the folder name inside of the logos/institutes folder.
+%%
+%%
+%% `institutelang' : str {'english', 'german', 'none'} [default: 'none']
+%%     Sets the language under the institute or project logo. If 
+%%     institutelang=none, the in institute or project logo will be printed 
+%%     without text. Corresponds to the end of the picture file name.
+%%     Note: If a `mylogo' path if provided, this option is ignored.
+%%
+%%
+%% `department' : str {'none', 'economics', 'mathematics'} [default: 
+%%     'economics']}
+%%     Defines the department logo used as `logo'. Corresponds to the folder
+%%     name inside of the logos/departments folder. 
+%%
+%%
+%% `departmentlang' : str {'english', 'german', 'none'} [default: 'english']
+%%     Set the language under the department logo. If departmentlang=none, only
+%%     the Universit\"at Bielefeld will be drawn. (Without the colored box)
+%%     Corresponds to the end of the picture file name.
+%%     Note: If a `logo' path if provided, this option is ignored.
+%%
+%%
+%% `shadow' : bool [default: false]
+%%     If `shadow' is true, blocks will have a fuzzy shadow (see `drop fuzzy 
+%%     shadow' in the `tcolorbox' package)
+%%
+%%
+%% `rounded' : bool [default: true]
+%%     If `rounded' is true, blocks have rounded corners according to the value
+%%     in the `\cornerarc' command below. If `rounded' is false, the block
+%%     corners are sharp.
+%%
+%%
+%% `blocks' : bool [default: true]
+%%     If `blocks' is true, beamer blocks are redefined using the `tcolorbox'
+%%     package.
+%%
+%%
+%% Outer theme options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% `bubbles' : bool [default: false]
+%%     If true, this option will draw the minipage navigation in the headline.
+%%     (Compare for example the `Frankfurt' theme but with colors to blend in
+%%     with the frame title and no shadings.)
+%%     Note: The headline is not drawn on frames with framenumber 1 (e.g. the
+%%           title frame)
+%%
+%%
+%% `CUDE' : bool [default: false]
+%%     If true, sets institute=CUDE.
+%%     Note: If a `mylogo' path if provided, this boolean is ignored.
+%%
+%%
+%% `BiGSEM' : bool [default: false]
+%%     If true, sets institute=BiGSEM.
+%%     Note: If a `mylogo' path if provided, this boolean is ignored.
+%%     Note: This option is temporarily not implemented!
+%%
+%%
+%% `footerline' : bool [default: true]
+%%     If true, a line in the 'structure' color is drawn at 5% of the 
+%%     frameheight.
+%%
+%%
+%% `logoinfoot' : bool [default: false]
+%%     If true, `logo' will be placed vertiaclly centered at the footer line.
+%%     Note: If both `logoinfoot' and `mylogoinfoot' are true, `logoinfoot' is
+%%           set to false.
+%%     Note: If both `logoinfoot' and `authorinfoot' are true, `logoinfoot' is
+%%           set to false.
+%%
+%%
+%% `mylogoinfoot' : bool [default: true]
+%%     If true, `mylogo' will be placed vertiaclly centered at the footer line.
+%%     Note: If both `logoinfoot' and `mylogoinfoot' are true `logoinfoot' is
+%%           set to false.
+%%     Note: If both `mylogoinfoot' and `authorinfoot' are true, `logoinfoot' 
+%%           is set to false.
+%%
+%%
+%% `authorinfoot' : bool [default: false]
+%%     If true, the short version of the author is placed below the footerline.
+%%     Note: If both `authorinfoot' and `logoinfoot' or `mylogoinfoot' are
+%%           are true, `logoinfoot' or `mylogoinfoot' is set to false.
+%%
+%%
+%% `titleinfoot' : bool [default: false]
+%%     If true, the short verion of the title is placed below the footerline.
+%%
+%%
+%% `totalframes' : bool [default: false]
+%%     If true, the current framenumber will be drawn the `totalframenumber' in
+%%     the format 'x / y'.
+%%
+%%
+%% `smallmargins' : bool [default: false]
+%%     If true, the left and right margins are halfed from the default of 10mm
+%%     to 5mm.
+%%
+%%
+%% Additional behavior for outer theme:
+%%     - The footline is not drawn on frames with framenumber 1 (e.g. the title
+%%       frame)
+%%     - If both `authorinfoot' and `titleinfoot' are true, the framenumber
+%%       (with optional total framenumber) is drawn on the same height as the
+%%       other text in the footline.
+%%
+%%
+%% Color theme options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% `invertedframetitle' : bool [default: true]
+%%     If true, the frame title and headline have `white' foreground and 
+%%     (mixed) `imwblue' background color.
+%%
+%%
+%% `alertred' : bool [default: false]
+%%     If true, the alert color is changed to the predefined color `healthred'.
+%%
+%%
+%% `truewhite' : bool [default: false]
+%%     If true, redefines the color white to #FFFFFF instead of #F0F0F0.
+%%
+%%
+%% Aggregate options (presets)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% `extended' : bool [default: false]
+%%     If true, the folllowing options are set from their default values:
+%%     - `mylogoinfoot' -> false
+%%     - `authorinfoot' -> true
+%%     - `titleinfoot'  -> true
+%%     - `totalframes'  -> true
+%%     - `bubbles'      -> true
+%%     - `sectiontoc'   -> true
+%%
+%%
+%% Other options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% The corner arc of the beamer blocks and itemize blocks can be changed here.
+%% For the behavior of this value compare '/tikz/rounded corners' in
+%% https://pgf-tikz.github.io/pgf/pgfmanual.pdf
+%% Note: The value of the command (probably) needs a unit.
+%%
+\newcommand{\cornerarc}{0.3mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% `mylogo' can be overwritten be providing a path in the below command. The
+%% path needs to look like e.g. 'figures/my_example_picture.jpg'. If the file
+%% at the provided path exists it will be used. Analogously `logo' can be over-
+%% written in a similar command below.
+%%
+\newcommand{\mylogopath}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% If a third logo should be placed on the titlepage, a path can be provided in
+%% the `midlogopath' command below.
+%% Note: The use of the third logo is not recommened if the frame aspect ratio
+%%       is 4:3 or something similar.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Adding additional department or institute or project logos is simple. The
+%% process for adding a new institute is described below but departments are
+%% analogous. (Note that no department language is equivalent having just the
+%% base logo and thus the none language variant can be omitted.)
+%%
+%% Say we want to add the Example Institute and have logos as .png files on 
+%% hand. In this case, we need to create a new folder named 'example' inside of
+%% logos/institutes, in which we put the logos and rename them to 
+%%     example_logo_{language}.png
+%% For the logo without any text we replace {language} with 'none'.
+%% Now we can simply call the theme with the option 
+%%     institute=example
+%% and the desired `institutelang' like the pre-configured institutes.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Changelog
+%% v1.0
+%% Main change to beta is the implementation of logo placement.
+%% 
+%% v1.01
+%% Added back BiGSEM logo.
+%% 
+%% v1.02
+%% Fixed issue with items in blocks not appearing properly.
+%%
+%% v1.03
+%% Added the Lelo font as default in the theme.
+%%
+%% v1.04
+%% Fixed \tilde in mathmode not displaying correctly.
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define available beamer options %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Booleans for font
+\newif\ifbeamer@unibielefeld@lelofont
+
+% Booleans for color theme
+\newif\ifbeamer@unibielefeld@invertedframetitle
+\newif\ifbeamer@unibielefeld@alertred
+\newif\ifbeamer@unibielefeld@truewhite
+
+% Booleans for inner theme
+\newif\ifbeamer@unibielefeld@rounded
+\newif\ifbeamer@unibielefeld@shadow
+\newif\ifbeamer@unibielefeld@blocks
+\newif\ifbeamer@unibielefeld@sectiontoc
+
+% Booleans for outer theme
+\newif\ifbeamer@unibielefeld@bubbles
+\newif\ifbeamer@unibielefeld@totalframes
+\newif\ifbeamer@unibielefeld@logoinfoot
+\newif\ifbeamer@unibielefeld@mylogoinfoot
+\newif\ifbeamer@unibielefeld@cudelogo
+\newif\ifbeamer@unibielefeld@bigsemlogo
+\newif\ifbeamer@unibielefeld@footerline
+\newif\ifbeamer@unibielefeld@authorinfoot
+\newif\ifbeamer@unibielefeld@titleinfoot
+\newif\ifbeamer@unibielefeld@smallmargins
+
+% Booleans for aggregate options
+\newif\ifbeamer@unibielefeld@simple
+\newif\ifbeamer@unibielefeld@extended
+
+
+% Declare options for fonts
+\DeclareOptionBeamer{lelofont}[true]{\csname beamer@unibielefeld@lelofont#1\endcsname}
+
+% Declare options for color theme
+\DeclareOptionBeamer{invertedframetitle}[true]{\csname beamer@unibielefeld@invertedframetitle#1\endcsname}
+\DeclareOptionBeamer{alertred}[true]{\csname beamer@unibielefeld@alertred#1\endcsname}
+\DeclareOptionBeamer{truewhite}[false]{\csname beamer@unibielefeld@truewhite#1\endcsname}
+
+% Declare options for inner theme
+\DeclareOptionBeamer{rounded}[true]{
+    \csname beamer@unibielefeld@rounded#1\endcsname
+    \csname beamer@unibielefeld@showtitlefalse\endcsname
+}
+\DeclareOptionBeamer{shadow}[true]{\csname beamer@unibielefeld@shadow#1\endcsname}
+\DeclareOptionBeamer{showtitle}[true]{\csname beamer@unibielefeld@showtitle#1\endcsname}
+\DeclareOptionBeamer{blocks}[true]{\csname beamer@unibielefeld@blocks#1\endcsname}
+\DeclareOptionBeamer{titlepage}[true]{\csname beamer@unibielefeld@titlepage#1\endcsname}
+\DeclareOptionBeamer{sectiontoc}[true]{\csname beamer@unibielefeld@sectiontoc#1\endcsname}
+\DeclareOptionBeamer{institute}[IMW]{\def\beamer@unibielefeld@institute{#1}}
+\DeclareOptionBeamer{institutelang}[none]{\def\beamer@unibielefeld@institutelang{#1}}
+\DeclareOptionBeamer{department}[economics]{\def\beamer@unibielefeld@department{#1}}
+\DeclareOptionBeamer{departmentlang}[english]{\def\beamer@unibielefeld@departmentlang{#1}}
+
+% Declare options for outer theme
+\DeclareOptionBeamer{bubbles}[true]{\csname beamer@unibielefeld@bubbles#1\endcsname}
+\DeclareOptionBeamer{totalframes}[true]{\csname beamer@unibielefeld@totalframes#1\endcsname}
+\DeclareOptionBeamer{logoinfoot}[true]{\csname beamer@unibielefeld@logoinfoot#1\endcsname}
+\DeclareOptionBeamer{mylogoinfoot}[true]{\csname beamer@unibielefeld@mylogoinfoot#1\endcsname}
+\DeclareOptionBeamer{CUDE}[true]{\csname beamer@unibielefeld@cudelogo#1\endcsname}
+\DeclareOptionBeamer{BiGSEM}[true]{\csname beamer@unibielefeld@bigsemlogo#1\endcsname}
+\DeclareOptionBeamer{footerline}[true]{\csname beamer@unibielefeld@footerline#1\endcsname}
+\DeclareOptionBeamer{authorinfoot}[true]{\csname beamer@unibielefeld@authorinfoot#1\endcsname}
+\DeclareOptionBeamer{titleinfoot}[true]{\csname beamer@unibielefeld@titleinfoot#1\endcsname}
+\DeclareOptionBeamer{smallmargins}[true]{\csname beamer@unibielefeld@smallmargins#1\endcsname}
+
+% Declare aggregate options
+\DeclareOptionBeamer{simple}[true]{\csname beamer@unibielefeld@simple#1\endcsname}
+\DeclareOptionBeamer{extended}[true]{\csname beamer@unibielefeld@extended#1\endcsname}
+
+
+% Execute options font
+\ExecuteOptionsBeamer{lelofont=true}
+
+% Execute options color theme
+\ExecuteOptionsBeamer{invertedframetitle=true}
+\ExecuteOptionsBeamer{alertred=false}
+\ExecuteOptionsBeamer{truewhite=false}
+
+% Execute options inner theme
+\ExecuteOptionsBeamer{rounded=true}
+\ExecuteOptionsBeamer{shadow=false}
+\ExecuteOptionsBeamer{blocks=true}
+\ExecuteOptionsBeamer{titlepage=true}
+\ExecuteOptionsBeamer{sectiontoc=false}
+\ExecuteOptionsBeamer{institute=IMW}
+\ExecuteOptionsBeamer{institutelang=none}
+\ExecuteOptionsBeamer{department=economics}
+\ExecuteOptionsBeamer{departmentlang=english}
+
+% Execute options outer theme
+\ExecuteOptionsBeamer{bubbles=false}
+\ExecuteOptionsBeamer{totalframes=false}
+\ExecuteOptionsBeamer{logoinfoot=false}
+\ExecuteOptionsBeamer{mylogoinfoot=true}
+\ExecuteOptionsBeamer{CUDE=false}
+\ExecuteOptionsBeamer{BiGSEM=false}
+\ExecuteOptionsBeamer{footerline=true}
+\ExecuteOptionsBeamer{authorinfoot=false}
+\ExecuteOptionsBeamer{titleinfoot=false}
+\ExecuteOptionsBeamer{smallmargins=false}
+
+% Execute aggregate options
+\ExecuteOptionsBeamer{simple=true}
+\ExecuteOptionsBeamer{extended=false}
+
+% Set options for aggregate options
+\ifbeamer@unibielefeld@simple
+    % Simple option has become the default anyways.
+    % Should the option be kept in as a toggle that does nothing??
+    \ExecuteOptionsBeamer{rounded=true}
+    \ExecuteOptionsBeamer{totalframes=false}
+    \ExecuteOptionsBeamer{invertedframetitle=true}
+    \ExecuteOptionsBeamer{bubbles=false}
+    \ExecuteOptionsBeamer{mylogoinfoot=true}
+\fi
+
+
+\ProcessOptionsBeamer
+
+\ifbeamer@unibielefeld@extended
+    \beamer@unibielefeld@mylogoinfootfalse
+    \beamer@unibielefeld@authorinfoottrue
+    \beamer@unibielefeld@titleinfoottrue
+    \beamer@unibielefeld@totalframestrue
+    \beamer@unibielefeld@bubblestrue
+    \beamer@unibielefeld@sectiontoctrue
+\fi
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define `logo` path here !!!  %
+\newcommand{\logopath}{}        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define `midlogo' path here!  %
+\newcommand{\midlogopath}{}     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%
+%%% Font Theme %%%
+%%%%%%%%%%%%%%%%%%
+
+% Set fontfamily (especially to display the correct math font)
+\usefonttheme{professionalfonts}
+
+% Import Lelo font
+\ifLuaTeX
+\protected\def\pdfmapline {\pdfextension mapline }
+\fi
+
+% Add Lelo to pdfLatex map file
+\pdfmapline{+Lelo-Regular < T1-WGL4.enc << Lelo-Regular.otf}
+\pdfmapline{+Lelo-Italic < T1-WGL4.enc << Lelo-RegularItalic.otf}
+\pdfmapline{+Lelo-Bold < T1-WGL4.enc << Lelo-Bold.otf}
+\pdfmapline{+Lelo-BoldItalic < T1-WGL4.enc << Lelo-BoldItalic.otf}
+
+\ifbeamer@unibielefeld@lelofont
+  \renewcommand{\familydefault}{lelo}
+\fi
+
+%%%%%%%%%%%%%%%%%%%
+%%% Color Theme %%%
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%
+%% Define colors %%
+%%%%%%%%%%%%%%%%%%%
+
+% General colors
+\definecolor{white}{HTML}{F0F0F0}
+\ifbeamer@unibielefeld@truewhite
+  \definecolor{white}{HTML}{FFFFFF}
+\fi
+\definecolor{red}{HTML}{E30026}
+\definecolor{blue}{HTML}{0784C8}
+\definecolor{yellow}{HTML}{F8D42A}
+\definecolor{orange}{HTML}{F59A01}
+\definecolor{magenta}{HTML}{CA2D78}
+\definecolor{green}{HTML}{4EAF30}
+\definecolor{violet}{HTML}{BB7BB3}
+\definecolor{pink}{HTML}{CA2D78}
+\definecolor{cyan}{HTML}{22BADE}
+
+% Bielefeld Uni/WiWi colors
+\definecolor{universitygreen}{HTML}{008956}
+\definecolor{universitylightgreen}{HTML}{14F5B4}
+\definecolor{posterpurple}{HTML}{73789B}
+\definecolor{econlightblue}{HTML}{50AFEF}
+\definecolor{econverylightblue}{HTML}{79C2E2}
+\definecolor{econveryverylightblue}{HTML}{A4D6F2}
+\definecolor{econalmostwhiteblue}{HTML}{D0EAF9}
+
+% Official Color Definitions
+\definecolor{biologygreen}{HTML}{92B168}
+\definecolor{chemistrypurple}{HTML}{A08CAA}
+\definecolor{educationorange}{HTML}{F08C50}
+\definecolor{historyblue}{HTML}{7DB4BE}
+\definecolor{healthred}{HTML}{DC5A5A}
+\definecolor{literatureblue}{HTML}{8FA3B9}
+\definecolor{mathyellow}{HTML}{DCAA41}
+\definecolor{medicineblue}{HTML}{145F7D}
+\definecolor{physicsgreen}{HTML}{649696}
+\definecolor{psycologyred}{HTML}{8C3250}
+\definecolor{lawgray}{HTML}{8C8C96}
+\definecolor{sociologyyellow}{HTML}{BFD02F}
+\definecolor{techblue}{HTML}{558CA0}
+\definecolor{econblue}{HTML}{74799B}
+
+
+% IMW color and related colors
+\definecolor{imwblue}{HTML}{3c3c5a}
+\definecolor{imwlightblue}{HTML}{385DC9}
+\definecolor{imwyellow}{HTML}{C9BD24}
+\colorlet{cudecolor}{econblue}
+\definecolor{bigsemblue}{HTML}{3AA7DF}
+
+%%%%%%%%%%%%%%%%%%%%
+%% Color Settings %%
+%%%%%%%%%%%%%%%%%%%%
+
+% Structure colors
+\setbeamercolor{title}{fg=imwblue}
+\setbeamercolor{frametitle}{fg=imwblue}
+\setbeamercolor{structure}{fg=imwblue}
+\setbeamercolor{section in head/foot}{fg=imwblue}
+
+% Text colors
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{alerted text}{fg=educationorange!95!black}
+\setbeamercolor{example text}{fg=universitygreen}
+
+% Block colors
+%% Normal block
+\setbeamercolor{block title}{fg=white,bg=imwblue!80}
+\setbeamercolor{block body}{bg=white}
+
+%% Alert block
+\setbeamercolor{block title alerted}{fg=white, bg=educationorange!95!black}
+\setbeamercolor{block body alerted}{bg=white}
+
+%% Example block
+\setbeamercolor{block title example}{fg=white, bg=universitygreen!80}
+\setbeamercolor{block body example}{bg=white}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% `invertedframetitle` Color Scheme Override %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifbeamer@unibielefeld@invertedframetitle
+    \setbeamercolor{frametitle}{fg=white,bg=imwblue!90}
+    \setbeamercolor{section in head/foot}{fg=white,bg=imwblue!90}
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% `alertred` Color Scheme Override %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifbeamer@unibielefeld@alertred
+    \setbeamercolor{alerted text}{fg=healthred!90!black}
+    \setbeamercolor{block title alerted}{fg=white, bg=healthred!90!black}
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%
+%%% Inner Theme %%%
+%%%%%%%%%%%%%%%%%%%
+
+% Removes Navigation Symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Turns on numbering of captions
+\setbeamertemplate{caption}[numbered]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Modification of Blocks %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Define new conditional
+\newif\ifbeamer@unibielefeld@showtitle
+
+% Create command to initilalize the appropriate colors
+\newcommand{\beamer@unibielefeld@colorini}[1][]{
+  \usebeamercolor{block body#1} 
+  \colorlet{beamer@unibielefeld@bodybg}{block body#1.bg}
+  \colorlet{beamer@unibielefeld@bodyfg}{block body#1.fg}
+  \usebeamercolor{block title#1}
+  \colorlet{beamer@unibielefeld@titlebg}{block title#1.bg}
+  \colorlet{beamer@unibielefeld@titlefg}{block title#1.fg}
+  \usebeamercolor{normal text}
+}
+
+% Set global tcolorbox spacing
+\tcbsetforeverylayer{
+  left=0.5mm,
+  right=0.5mm,
+  enhanced,
+  top=1.5mm,
+  bottom=0.5mm,
+  clip upper,
+}
+
+\ifbeamer@unibielefeld@shadow
+  \tcbsetforeverylayer{drop fuzzy shadow=black!90!structure}
+\fi
+
+% Definition of blocks
+\newtcolorbox{beamer@unibielefeld@block}[1][]{
+    code={
+        \beamer@unibielefeld@colorini[#1]
+        \ifx\insertblocktitle\@empty
+          \beamer@unibielefeld@showtitlefalse
+        \else
+          \beamer@unibielefeld@showtitletrue
+          \tcbset{title=\insertblocktitle}
+        \fi
+    },
+    % Create own frame
+    frame hidden,
+    frame code={
+      \ifbeamer@unibielefeld@rounded
+        \draw [rounded corners=\cornerarc,draw=beamer@unibielefeld@titlebg,line width=2pt] ([xshift=0.3mm,yshift=-0.3mm]frame.north west) rectangle ([xshift=-0.3mm,yshift=0.3mm]frame.south east);
+      \else
+        \draw [sharp corners,draw=beamer@unibielefeld@titlebg,line width=2pt] ([xshift=0.3mm,yshift=-0.3mm]frame.north west) rectangle ([xshift=-0.3mm,yshift=0.3mm]frame.south east);
+      \fi
+    },
+    % Create appropriate title corners
+    title code={
+      \ifbeamer@unibielefeld@rounded
+        \fill [fill=beamer@unibielefeld@titlebg] {[rounded corners=\cornerarc] (title.south west) -- (title.north west) -- (title.north east)} -- (title.south east) -- cycle;
+      \else
+        \fill [fill=beamer@unibielefeld@titlebg] (title.north west) rectangle (title.south east);
+      \fi
+    },
+    % Create appropriate interior corners for titled and untitled blocks
+    interior titled code={
+      \ifbeamer@unibielefeld@rounded
+        \fill [fill=beamer@unibielefeld@bodybg] {[rounded corners=\cornerarc] (interior.north west) -- (interior.south west) -- (interior.south east)} -- (interior.north east) -- cycle;
+      \else
+        \fill [fill=beamer@unibielefeld@bodybg] (interior.north west) rectangle (interior.south east)
+      \fi
+    },
+    interior code={
+      \ifbeamer@unibielefeld@rounded
+        \fill [fill=beamer@unibielefeld@bodybg] {[rounded corners=\cornerarc] (interior.north west) -- (interior.south west) -- (interior.south east)} -- (interior.north east) -- cycle;
+      \else
+        \fill [fill=beamer@unibielefeld@bodybg] (interior.north west) rectangle (interior.south east)
+      \fi
+    },
+    colback=beamer@unibielefeld@bodybg,
+    colbacktitle=beamer@unibielefeld@titlebg,
+    coltext=beamer@unibielefeld@bodyfg,
+    coltitle=beamer@unibielefeld@titlefg,
+    before title={\usebeamerfont{block title}},
+    before upper={\usebeamercolor{block body}\usebeamerfont{block body}},
+    titlerule=0mm,
+}
+
+\ifbeamer@unibielefeld@blocks
+  \setbeamertemplate{block begin}{\begin{beamer@unibielefeld@block}} 
+  \setbeamertemplate{block end}{\end{beamer@unibielefeld@block}}
+  \setbeamertemplate{block alerted begin}{\begin{beamer@unibielefeld@block}[ alerted]} 
+  \setbeamertemplate{block alerted end}{\end{beamer@unibielefeld@block}}
+  \setbeamertemplate{block example begin}{\begin{beamer@unibielefeld@block}[ example]} 
+  \setbeamertemplate{block example end}{\end{beamer@unibielefeld@block}}
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Modification of `itemize` end `enumerate` %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Itemize environment
+\defbeamertemplate*{itemize item}{IMW theme}{\raise 0.5mm\hbox{
+  \begin{tikzpicture}
+    \draw[rounded corners=\cornerarc, fill] (0,0) rectangle (0.15,0.15);
+  \end{tikzpicture}
+}}
+
+\defbeamertemplate*{itemize subitem}{IMW theme small}{\raise 0.5mm\hbox{
+  \begin{tikzpicture}
+    \draw[rounded corners=\cornerarc, fill] (0,0) rectangle (0.1,0.1);
+  \end{tikzpicture}
+}}
+
+
+\setbeamertemplate{itemize item}[IMW theme]
+\setbeamertemplate{itemize subitem}[IMW theme small]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Modification of `tableofcontents` %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\defbeamertemplate*{section in toc}{IMW theme}{
+  \leavevmode\leftskip=3ex
+  \llap{
+    \begin{tikzpicture}
+      % Scale the node to fit the text height
+      \draw (0,0) node [inner ysep=0em, scale=1.13] {
+      \usebeamerfont*{section number projected}
+      \usebeamercolor*[bg]{section number projected}
+      \inserttocsectionnumber.};
+    \end{tikzpicture}
+  }
+  \kern1ex
+  \inserttocsection\par
+}
+
+% Disallow the printing of subsections in the TOC
+\defbeamertemplate*{subsection in toc}{IMW theme}{}
+
+\setbeamertemplate{section in toc}[IMW theme]
+\setbeamertemplate{subsection in toc}[IMW theme]
+
+% Print currentsection if sectiontoc is true
+\ifbeamer@unibielefeld@sectiontoc
+    \AtBeginSection{
+        \begin{frame}<beamer>
+            \frametitle{Outline}
+            \tableofcontents[currentsection]
+        \end{frame}
+    }
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Modify `title page` %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\defbeamertemplate*{title page}{IMW theme}[1][]{
+  % Put titlegraphic
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw (current page.north west) node[below right, xshift=0.05\paperwidth, yshift=-0.05\paperheight] {\departmentlogo};
+    \draw (current page.north east) node[below left, xshift=-0.05\paperwidth, yshift=-0.05\paperheight] {\institutelogo};
+    \ifdefempty{\midlogopath}{}{
+      \draw (current page.north) node[below, yshift=-0.05\paperheight] {
+        \includegraphics[height=0.12\paperheight]{\midlogopath}
+      };
+    }
+  \end{tikzpicture}
+  
+  \vbox{}
+  \vfill\vfill
+  \begingroup
+    \centering
+
+    % Put title
+    \begin{beamercolorbox}[sep=8pt,center,#1]{title}
+    \usebeamerfont{title}\textbf{\inserttitle}\par%
+    \ifx\insertsubtitle\@empty%
+    \else%
+      \vskip0.25em%
+      {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+    \fi%     
+    \end{beamercolorbox}
+
+    \vskip1em\par
+
+    % Put Author
+    \begin{beamercolorbox}[sep=8pt,center,#1]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+
+    % Put institut
+    \begin{beamercolorbox}[sep=8pt,center,#1]{institute}
+      \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+
+    % Put date
+    \begin{beamercolorbox}[sep=8pt,center,#1]{date}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}
+
+  \endgroup
+}
+
+\setbeamertemplate{title page}[IMW theme]
+
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%%% Outer Theme %%%
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define `bubbles` option and style %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set `compress` to true for the potential headline
+\beamer@compresstrue
+
+% Define Headline template
+\defbeamertemplate{headline}{IMW theme bubbles}{
+  % Define appropriate fonts and colors
+  \usebeamerfont*{headline}
+  \usebeamercolor{section in head/foot}
+
+  \ifnum\theframenumber=1
+    % Put box in `white` on the first page.
+    \begin{beamercolorbox}[ht=2.25ex,dp=3.75ex]{white}
+    \end{beamercolorbox}%
+  \else
+    % Put bubbles on every other slide.
+    \begin{beamercolorbox}[ht=2.25ex,dp=3.75ex]{section in head/foot}
+        \insertnavigation{\paperwidth}
+    \end{beamercolorbox}%
+  \fi}%
+
+\ifbeamer@unibielefeld@bubbles
+    \setbeamertemplate{headline}[IMW theme bubbles]
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define frametitle template %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\defbeamertemplate*{frametitle}{IMW theme}
+    {%
+    \nointerlineskip%
+    \vskip-0.1ex%
+    \begin{beamercolorbox}[wd=\paperwidth,sep=0.3cm,vmode]{frametitle}
+        \vbox{}\vskip-1.25ex%
+        \usebeamerfont*{frametitle}\strut\insertframetitle%
+        \ifx\insertframesubtitle\@empty%
+            \strut\par%
+        \else
+            \par{\usebeamerfont*{framesubtitle}{\usebeamercolor[fg]{framesubtitle}\strut\insertframesubtitle}\strut\par}%
+        \fi%%
+        \vskip-0.7ex%
+    \end{beamercolorbox}%
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%% Define footline %%
+%%%%%%%%%%%%%%%%%%%%%
+
+% Define framecounterheight variable depending on authorinfott and titleinfoot
+\newcommand{\framecounterheight}{0.05}
+\ifbeamer@unibielefeld@authorinfoot\ifbeamer@unibielefeld@titleinfoot
+    \renewcommand{\framecounterheight}{0.025}
+\fi\fi
+
+% Overwrite logo and mylogo with just mylogo (Default is the IMW logo)
+\ifbeamer@unibielefeld@logoinfoot\ifbeamer@unibielefeld@mylogoinfoot
+    \beamer@unibielefeld@logoinfootfalse
+\fi\fi
+
+% Overwrite authorinfoot and mylogo with just authorinfoot
+\ifbeamer@unibielefeld@mylogoinfoot\ifbeamer@unibielefeld@authorinfoot
+    \beamer@unibielefeld@mylogoinfootfalse
+\fi\fi
+
+% Overwrite authorinfoot and logo with just authorinfoot
+\ifbeamer@unibielefeld@logoinfoot\ifbeamer@unibielefeld@authorinfoot
+    \beamer@unibielefeld@logoinfootfalse
+\fi\fi
+
+% Define place mylogo template 
+\defbeamertemplate*{place mylogo}{IMW theme}{
+    \ifdefempty{\mylogopath}{
+        \draw (0.15\paperwidth, 0.05\paperheight) node[fill=body.bg, scale=0.58] {\institutelogo};
+        }{
+        \IfFileExists{\mylogopath}{
+            \draw (0.15\paperwidth, 0.05\paperheight) node[fill=body.bg] {\includegraphics[height=0.07\paperheight]{\mylogopath}};
+            }{}
+        }
+}
+
+% Define place logo template (default is the faculty logo)
+\defbeamertemplate*{place logo}{IMW theme}{
+    \ifdefempty{\logopath}{
+        \draw (0.15\paperwidth, 0.05\paperheight) node[fill=body.bg, scale=0.50] {\departmentlogo};
+        }{
+        \IfFileExists{\logopath}{
+            \draw (0.15\paperwidth, 0.05\paperheight) node[fill=body.bg] {\includegraphics[height=0.07\paperheight]{\logopath}};
+            }{}
+        }
+}
+
+% Create footline template
+\defbeamertemplate*{footline}{IMW theme}{
+    \ifnum \theframenumber=1
+    \else
+    \usebeamercolor{structure}
+    \usebeamercolor{body}
+    
+    \begin{tikzpicture}
+        % Draw helpline to span the footer
+        \draw [draw=body.bg] (0,0) -- (0,0.05\paperheight);
+
+        % Draw line in footer if footerline is true
+        \ifbeamer@unibielefeld@footerline
+            \draw [draw=structure] (0,0.05\paperheight) -- (0.999\paperwidth,0.05\paperheight);
+        \fi
+        % Draw framenumber with or without the total frame number
+        \ifbeamer@unibielefeld@totalframes
+            \draw (0.85\paperwidth, \framecounterheight\paperheight) node[fill=body.bg] {\,\insertframenumber \,/\,\inserttotalframenumber\,};
+        \else
+            \draw (0.85\paperwidth, \framecounterheight\paperheight) node[fill=body.bg] {\,\insertframenumber\,};
+        \fi
+        
+        % Place the logo if wanted
+        \ifbeamer@unibielefeld@logoinfoot
+            \usebeamertemplate{place logo}
+        \fi
+        \ifbeamer@unibielefeld@mylogoinfoot
+            \usebeamertemplate{place mylogo}
+        \fi
+
+        % Place title if wanted
+        \ifbeamer@unibielefeld@titleinfoot
+            \draw (0.5\paperwidth, 0.025\paperheight) node[fill=body.bg] {\usebeamerfont{title in head/foot}\insertshorttitle};
+        \fi
+
+        % Place author if wanted
+        % This is done last s.t. if the safeguard above fails the author names are on top
+        \ifbeamer@unibielefeld@authorinfoot
+            \draw (0.15\paperwidth, 0.025\paperheight) node[fill=body.bg] {\usebeamerfont{author in head/foot}\insertshortauthor};
+        \fi
+    \end{tikzpicture}
+    \fi
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define small margins option %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifbeamer@unibielefeld@smallmargins
+    \setbeamersize{text margin left=5mm, text margin right=5mm}
+\fi
+
+
+
+
+\mode<all>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define Logo commands.                                   %%
+%% Note: This code assumes that LaTex and not Tex is used. %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\institutelogoheight}{0.12}
+\ifdefstring{\beamer@unibielefeld@institutelang}{none}{
+  \renewcommand{\institutelogoheight}{0.09}
+}{}
+
+\newcommand{\institutelogo}{
+  \includegraphics[height=\institutelogoheight\paperheight]{
+    logos/institutes/\beamer@unibielefeld@institute/\beamer@unibielefeld@institute_logo_\beamer@unibielefeld@institutelang
+  }
+}
+
+
+\newcommand{\departmentlogoheight}{0.2}
+\ifdefstring{\beamer@unibielefeld@departmentlang}{none}{
+  \renewcommand{\departmentlogoheight}{0.08}
+  \ExecuteOptionsBeamer{department=none}
+}{}
+
+\ifdefstring{\beamer@unibielefeld@department}{none}{
+  \renewcommand{\departmentlogoheight}{0.08}
+}{}
+
+\newcommand{\departmentlogo}{
+  \includegraphics[height=\departmentlogoheight\paperheight]{
+    logos/departments/\beamer@unibielefeld@department/\beamer@unibielefeld@department_logo_\beamer@unibielefeld@departmentlang
+  }
+}
+
+\ifbeamer@unibielefeld@cudelogo
+  \ExecuteOptionsBeamer{institute=CUDE}
+\fi
+
+\ifbeamer@unibielefeld@bigsemlogo
+  \ExecuteOptionsBeamer{institute=BiGSEM}
+\fi

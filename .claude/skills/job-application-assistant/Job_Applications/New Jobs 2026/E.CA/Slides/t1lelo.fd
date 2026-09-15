@@ -1,0 +1,6 @@
+\ProvidesFile{t1lelo.fd}
+\DeclareFontFamily{T1}{lelo}{}
+\DeclareFontShape{T1}{lelo}{m}{n}{<-> Lelo-Regular}{}
+\DeclareFontShape{T1}{lelo}{m}{it}{<-> Lelo-Italic}{}
+\DeclareFontShape{T1}{lelo}{b}{n}{<-> Lelo-Bold}{}
+\DeclareFontShape{T1}{lelo}{b}{it}{<-> Lelo-BoldItalic}{}

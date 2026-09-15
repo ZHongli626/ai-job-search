@@ -1,0 +1,441 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{battiston2012}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e16a33f0b88b28bf78bd9d1d94a27c82}{%
+           family={Battiston},
+           familyi={B\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cafff954f2d085fafc003e0824f31b7c}{%
+           family={Delli\bibnamedelima Gatti},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Domenico},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6b601339b316b9efbffc86fd416d403}{%
+           family={Gallegati},
+           familyi={G\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d232c1a1cca01f85eb2fe733e444a0f4}{%
+           family={Greenwald},
+           familyi={G\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cb57f4b2aeede8f5865afde7b8453d40}{%
+           family={Stiglitz},
+           familyi={S\bibinitperiod},
+           given={Joseph\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fcfaf8dd806f29015f2a8c34a167b418}
+      \strng{fullhash}{346cf7af5eb1e1184d6251685830a834}
+      \strng{fullhashraw}{346cf7af5eb1e1184d6251685830a834}
+      \strng{bibnamehash}{346cf7af5eb1e1184d6251685830a834}
+      \strng{authorbibnamehash}{346cf7af5eb1e1184d6251685830a834}
+      \strng{authornamehash}{fcfaf8dd806f29015f2a8c34a167b418}
+      \strng{authorfullhash}{346cf7af5eb1e1184d6251685830a834}
+      \strng{authorfullhashraw}{346cf7af5eb1e1184d6251685830a834}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Dynamics and Control}
+      \field{number}{8}
+      \field{title}{Liaisons Dangereuses: Increasing Connectivity, Risk Sharing, and Systemic Risk}
+      \field{volume}{36}
+      \field{year}{2012}
+      \field{pages}{1121\bibrangedash 1141}
+      \range{pages}{21}
+    \endentry
+    \entry{caiani2016agent}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=84b1427501fd048ea4e3d8d7b9c19281}{%
+           family={Caiani},
+           familyi={C\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae8bd78526c5612bde41aa298b833071}{%
+           family={Godin},
+           familyi={G\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3fc2af895d5bd72c1d9c2b13737de83}{%
+           family={Caverzasi},
+           familyi={C\bibinitperiod},
+           given={Eugenio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6b601339b316b9efbffc86fd416d403}{%
+           family={Gallegati},
+           familyi={G\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4fdbcc78abfbeaf00f11f95f11e9be88}{%
+           family={Kinsella},
+           familyi={K\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cb57f4b2aeede8f5865afde7b8453d40}{%
+           family={Stiglitz},
+           familyi={S\bibinitperiod},
+           given={Joseph\bibnamedelima E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{1da3a709f833a0f8441a1a26ad07ca10}
+      \strng{fullhash}{9856d871e928099c44c13f08b3114c9c}
+      \strng{fullhashraw}{9856d871e928099c44c13f08b3114c9c}
+      \strng{bibnamehash}{9856d871e928099c44c13f08b3114c9c}
+      \strng{authorbibnamehash}{9856d871e928099c44c13f08b3114c9c}
+      \strng{authornamehash}{1da3a709f833a0f8441a1a26ad07ca10}
+      \strng{authorfullhash}{9856d871e928099c44c13f08b3114c9c}
+      \strng{authorfullhashraw}{9856d871e928099c44c13f08b3114c9c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Dynamics and Control}
+      \field{title}{Agent based-stock flow consistent macroeconomics: Towards a benchmark model}
+      \field{volume}{69}
+      \field{year}{2016}
+      \field{pages}{375\bibrangedash 408}
+      \range{pages}{34}
+    \endentry
+    \entry{gourdel2024double}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=aa2f10ef392188fa3f3a608d3fd20dc0}{%
+           family={Gourdel},
+           familyi={G\bibinitperiod},
+           given={Régis},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab5ec62604b99daf05d39f5974dc2bb7}{%
+           family={Monasterolo},
+           familyi={M\bibinitperiod},
+           given={Irene},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e33a210ee8e0addb391a21acb464342}{%
+           family={Dunz},
+           familyi={D\bibinitperiod},
+           given={Nepomuk},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c94690315014bb6e6a05198fbbc324fe}{%
+           family={Mazzocchetti},
+           familyi={M\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84d16838156e05bb91f0b631296b9460}{%
+           family={Parisi},
+           familyi={P\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{47ec0e1d508875f757e271b2dc457509}
+      \strng{fullhash}{9327340a86c2faa1ba773755c0b2341d}
+      \strng{fullhashraw}{9327340a86c2faa1ba773755c0b2341d}
+      \strng{bibnamehash}{9327340a86c2faa1ba773755c0b2341d}
+      \strng{authorbibnamehash}{9327340a86c2faa1ba773755c0b2341d}
+      \strng{authornamehash}{47ec0e1d508875f757e271b2dc457509}
+      \strng{authorfullhash}{9327340a86c2faa1ba773755c0b2341d}
+      \strng{authorfullhashraw}{9327340a86c2faa1ba773755c0b2341d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Stability}
+      \field{title}{The double materiality of climate physical and transition risks in the euro area}
+      \field{volume}{71}
+      \field{year}{2024}
+      \field{pages}{101233}
+      \range{pages}{1}
+    \endentry
+    \entry{lamperti2021three}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=24c75f399aeda6e0cc85a87c0782273a}{%
+           family={Lamperti},
+           familyi={L\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d73e7724f0290f90b17bbf8a75420f9c}{%
+           family={Bosetti},
+           familyi={B\bibinitperiod},
+           given={Valentina},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ad6cdad67652912a0885baf04df9c31}{%
+           family={Roventini},
+           familyi={R\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e66347ef4e8ddde12fb7e4041aaa9864}{%
+           family={Tavoni},
+           familyi={T\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3dbc65df4316252da41aa858e46d46ef}{%
+           family={Treibich},
+           familyi={T\bibinitperiod},
+           given={Tania},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{4a66e59622d06c417f9eb486910a63fa}
+      \strng{fullhash}{842b76e25d86ff8f5fae2550f41cedcb}
+      \strng{fullhashraw}{842b76e25d86ff8f5fae2550f41cedcb}
+      \strng{bibnamehash}{842b76e25d86ff8f5fae2550f41cedcb}
+      \strng{authorbibnamehash}{842b76e25d86ff8f5fae2550f41cedcb}
+      \strng{authornamehash}{4a66e59622d06c417f9eb486910a63fa}
+      \strng{authorfullhash}{842b76e25d86ff8f5fae2550f41cedcb}
+      \strng{authorfullhashraw}{842b76e25d86ff8f5fae2550f41cedcb}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Stability}
+      \field{title}{Three green financial policies to address climate risks}
+      \field{volume}{54}
+      \field{year}{2021}
+      \field{pages}{100875}
+      \range{pages}{1}
+    \endentry
+    \entry{ramossolana2019}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fdf0c1f1f14890ed9a33c36aba359443}{%
+           family={Ramos},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=236cd087099519fce5aa1a6d40791aba}{%
+           family={Solana},
+           familyi={S\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6647c28a8a654dbb3301c4e722d980f3}
+      \strng{fullhash}{6647c28a8a654dbb3301c4e722d980f3}
+      \strng{fullhashraw}{6647c28a8a654dbb3301c4e722d980f3}
+      \strng{bibnamehash}{6647c28a8a654dbb3301c4e722d980f3}
+      \strng{authorbibnamehash}{6647c28a8a654dbb3301c4e722d980f3}
+      \strng{authornamehash}{6647c28a8a654dbb3301c4e722d980f3}
+      \strng{authorfullhash}{6647c28a8a654dbb3301c4e722d980f3}
+      \strng{authorfullhashraw}{6647c28a8a654dbb3301c4e722d980f3}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{University of Miami Business Law Review}
+      \field{number}{1}
+      \field{title}{Bank Resolution and Creditor Distribution: The Tension Shaping Global Banking, Part I: External and Intra-Group Funding and Ex Ante Planning v. Ex Post Execution Dimensions}
+      \field{volume}{28}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 87}
+      \range{pages}{87}
+    \endentry
+    \entry{roncoroni2021climate}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=775dc66104485ead6ab9e95d1aad0c95}{%
+           family={Roncoroni},
+           familyi={R\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e16a33f0b88b28bf78bd9d1d94a27c82}{%
+           family={Battiston},
+           familyi={B\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc67486081cb0d9b891fe94522473b0a}{%
+           family={Escobar-Farfán},
+           familyi={E\bibinithyphendelim F\bibinitperiod},
+           given={Luis\bibnamedelima OL},
+           giveni={L\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d7c6556b3100671dbacf20c54a9f825}{%
+           family={Martinez-Jaramillo},
+           familyi={M\bibinithyphendelim J\bibinitperiod},
+           given={Serafin},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{2d8c63152fab065d2fb3d2114859b81e}
+      \strng{fullhash}{0a0ea3c1ab3603d3ee3752c4ba5f9502}
+      \strng{fullhashraw}{0a0ea3c1ab3603d3ee3752c4ba5f9502}
+      \strng{bibnamehash}{0a0ea3c1ab3603d3ee3752c4ba5f9502}
+      \strng{authorbibnamehash}{0a0ea3c1ab3603d3ee3752c4ba5f9502}
+      \strng{authornamehash}{2d8c63152fab065d2fb3d2114859b81e}
+      \strng{authorfullhash}{0a0ea3c1ab3603d3ee3752c4ba5f9502}
+      \strng{authorfullhashraw}{0a0ea3c1ab3603d3ee3752c4ba5f9502}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Stability}
+      \field{title}{Climate risk and financial stability in the network of banks and investment funds}
+      \field{volume}{54}
+      \field{year}{2021}
+      \field{pages}{100870}
+      \range{pages}{1}
+    \endentry
+    \entry{solana2022}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=236cd087099519fce5aa1a6d40791aba}{%
+           family={Solana},
+           familyi={S\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=d5d9d110fc22e940a0854388cabd67eb}{%
+           family={Chadwick},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f594cb2bf82e63b0b73462401375f196}{%
+           family={Lozano-Rodríguez},
+           familyi={L\bibinithyphendelim R\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=21a87c70ef4653b83a04381ec8b77fd0}{%
+           family={Palacios-Lleras},
+           familyi={P\bibinithyphendelim L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fcbc7ce287881f66b088091ac770c983}{%
+           family={Solana},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{236cd087099519fce5aa1a6d40791aba}
+      \strng{fullhash}{236cd087099519fce5aa1a6d40791aba}
+      \strng{fullhashraw}{236cd087099519fce5aa1a6d40791aba}
+      \strng{bibnamehash}{236cd087099519fce5aa1a6d40791aba}
+      \strng{authorbibnamehash}{236cd087099519fce5aa1a6d40791aba}
+      \strng{authornamehash}{236cd087099519fce5aa1a6d40791aba}
+      \strng{authorfullhash}{236cd087099519fce5aa1a6d40791aba}
+      \strng{authorfullhashraw}{236cd087099519fce5aa1a6d40791aba}
+      \strng{editorbibnamehash}{4db62724453615bbfc913ae6f234f9ae}
+      \strng{editornamehash}{c997c6c38824ac1f941490234d193358}
+      \strng{editorfullhash}{4db62724453615bbfc913ae6f234f9ae}
+      \strng{editorfullhashraw}{4db62724453615bbfc913ae6f234f9ae}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Markets, Constitutions and Inequality}
+      \field{title}{Market Efficiency as a Directive Principle of {EU} Monetary Policy}
+      \field{year}{2022}
+    \endentry
+    \entry{solanagoldoni2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=236cd087099519fce5aa1a6d40791aba}{%
+           family={Solana},
+           familyi={S\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88ce34b3b2e4ea736d60ac938776b24f}{%
+           family={Goldoni},
+           familyi={G\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eabe01d305ccddc8031acf61e6af0360}
+      \strng{fullhash}{eabe01d305ccddc8031acf61e6af0360}
+      \strng{fullhashraw}{eabe01d305ccddc8031acf61e6af0360}
+      \strng{bibnamehash}{eabe01d305ccddc8031acf61e6af0360}
+      \strng{authorbibnamehash}{eabe01d305ccddc8031acf61e6af0360}
+      \strng{authornamehash}{eabe01d305ccddc8031acf61e6af0360}
+      \strng{authorfullhash}{eabe01d305ccddc8031acf61e6af0360}
+      \strng{authorfullhashraw}{eabe01d305ccddc8031acf61e6af0360}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Law Open}
+      \field{number}{1}
+      \field{title}{The Legal Nature of Market Neutrality in the Euro Area's Monetary Policy}
+      \field{volume}{3}
+      \field{year}{2024}
+      \field{pages}{7\bibrangedash 49}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1017/elo.2024.2
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
