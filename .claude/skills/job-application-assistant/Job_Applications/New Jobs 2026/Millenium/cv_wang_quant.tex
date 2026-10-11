@@ -1,0 +1,154 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[margin=1.55cm,top=1.35cm,bottom=1.45cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\definecolor{accent}{HTML}{17365D}
+\definecolor{muted}{HTML}{4F5965}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdftitle={Zhongli Wang - Quantitative Researcher CV},
+  pdfauthor={Zhongli Wang}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\small\textcolor{muted}{\thepage}}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}{}
+  [\vspace{1pt}\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=1.25em,nosep,topsep=2pt,itemsep=1.5pt}
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}\par
+}
+\newcommand{\project}[2]{%
+  \textbf{#1}\\[-1pt]
+  \textcolor{muted}{\small #2}\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{\textcolor{accent}{Zhongli Wang}}}\\[3pt]
+  {\large Quantitative Researcher \textbar{} Machine Learning \textbar{} Statistical Modeling}\\[3pt]
+  Bielefeld, Germany \textbar{} Open to relocation to Hong Kong \textbar{} PhD defense: 21 September 2026\\[2pt]
+  \href{tel:+4916095416015}{+49 160 95416015} \textbar{}
+  \href{mailto:nkwangzhongli@gmail.com}{nkwangzhongli@gmail.com} \textbar{}
+  \href{https://sites.google.com/view/zhongli-wang/}{sites.google.com/view/zhongli-wang}
+\end{center}
+
+\section{Profile}
+Quantitative researcher and Economics PhD candidate who develops data-driven models through hypothesis formation, Python implementation, estimation, and robustness testing. Holds an MA focused on Banking and Finance and Data Science and a BSc in Finance. Peer-reviewed machine-learning research uses real-world financial-statement and market data; current work examines estimation, uncertainty, and strategic decisions in dynamic markets.
+
+\section{Core Quantitative Competencies}
+\begin{itemize}
+  \item \textbf{Machine learning and financial datasets:} XGBoost, Random Forest, scikit-learn, and labeled accounting, financial, and market variables.
+  \item \textbf{Disciplined scientific research:} Hypothesis-driven modeling, controlled computational experiments, sensitivity analysis, and robustness testing.
+  \item \textbf{Statistical and mathematical methods:} SMM, MCMC, econometrics, simulation, neural-network surrogates, and numerical parameter search.
+  \item \textbf{Programming and research engineering:} Advanced Python; Julia, R, Mathematica, SQL, Linux, Git, and reproducible LaTeX workflows.
+  \item \textbf{Financial-market perspective:} Banking, quantitative finance, financial engineering, risk analysis, and market structure.
+\end{itemize}
+
+\section{Research and Professional Experience}
+\role{Doctoral Researcher, Computational Economics}{Oct. 2021--present}{Bielefeld University and Universit\`a Cattolica del Sacro Cuore}{Bielefeld / Milan}
+\begin{itemize}
+  \item Develop quantitative models of investment, competition, consumer choice, and network effects in dynamic markets.
+  \item Translate hypotheses into mathematical mechanisms and Python code, design simulation experiments, and conduct sensitivity and robustness tests.
+  \item Estimate and calibrate models with SMM, MCMC, and neural-network surrogates using AT\&T and T-Mobile firm-level financial data.
+  \item Independently adapt research from machine learning, statistics, economics, and complex systems to new modeling contexts and compare methods for efficiency and reliability.
+\end{itemize}
+
+\role{Research Assistant}{Aug. 2022--Sept. 2022}{LucidMinds, DataVille 3000 project}{Amsterdam}
+\begin{itemize}
+  \item Developed Python models of consumer preferences and dynamic-system behavior, then analyzed simulation output for testable research insights.
+\end{itemize}
+
+\role{Helping Assistant, Quantitative Business Administration}{June 2019--June 2021}{University of Zurich}{Zurich}
+\begin{itemize}
+  \item Supported mathematical modeling in Mathematica and explained methods in microeconomics, corporate finance, and quantitative business administration.
+\end{itemize}
+
+\role{Finance and Banking Internships}{2016--2017}{People's Bank of China; Agricultural Bank of China; Gansu Financial Services Co.}{Lanzhou}
+\begin{itemize}
+  \item Reviewed financial-status reports, bank reporting, loan documentation, and annual financial-statement cases, gaining exposure to monetary policy and banking operations.
+\end{itemize}
+
+\newpage
+\begin{tabularx}{\linewidth}{@{}Xr@{}}
+  {\large\textbf{\textcolor{accent}{Zhongli Wang}}} &
+  {\small\textcolor{muted}{QUANTITATIVE RESEARCH \textbar{} MACHINE LEARNING \textbar{} FINANCE}}\\
+\end{tabularx}
+
+\section{Education}
+\textbf{PhD in Economics, Bielefeld University and Universit\`a Cattolica del Sacro Cuore} \hfill 2021--present\\
+EPOC Marie Sk\l odowska-Curie program. Defense scheduled for 21 September 2026. Dissertation on strategic behavior and economic dynamics in ICT markets using agent-based modeling.
+
+\textbf{MA in Business and Economics, University of Zurich} \hfill 2018--2021\\
+Banking and Finance major; Data Science minor; magna cum laude. Thesis used financial indicators and supervised ML to detect financial-statement fraud.
+
+\textbf{BSc in Finance and BA in German Language and Literature, Nankai University} \hfill 2014--2018\\
+BSc GPA: 4.39/5.0; BA GPA: 5.0/5.0. Relevant study: financial engineering, quantitative finance, calculus, and statistics.
+
+\section{Selected Quantitative Research}
+\project{Financial-Statement Fraud Detection and Polytope Fraud Theory}{Peer-reviewed publication in the \textit{International Review of Financial Analysis}, 2025}
+\begin{itemize}
+  \item Developed ten research-grounded red-flag indicators from manually labeled real-world financial data.
+  \item Applied and compared XGBoost and Random Forest across accounting, financial, and market variables to support interpretable fraud-risk analysis.
+\end{itemize}
+
+\project{Parameter Estimation for ICT Industry Models}{Work in progress using firm-level financial data}
+\begin{itemize}
+  \item Calibrate a quantitative model using AT\&T and T-Mobile firm-level financial data; compare SMM with neural-network surrogates for estimation efficiency and reliability.
+  \item Use simulation, numerical parameter search, and model comparison to test robustness across alternative specifications.
+\end{itemize}
+
+\project{Strategic Capacity Investment under Network Effects}{Job Market Paper}
+\begin{itemize}
+  \item Build a computational model of competing firms that adjust capacity investment under congestion and uncertain demand.
+  \item Run controlled experiments on how constraints, network effects, consumer choice, and strategic interaction shape profitability and market outcomes.
+\end{itemize}
+
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\raggedright\arraybackslash}p{3.6cm}X@{}}
+Programming & Python (advanced), Julia, R, Mathematica; SQL and C\# (basic); Linux and Git\\
+Machine Learning & XGBoost, Random Forest, scikit-learn, supervised learning, neural-network surrogates\\
+Quantitative Methods & SMM, MCMC, econometrics, simulation, parameter search, sensitivity and robustness analysis\\
+AI and Automation & Microsoft AutoGen, LangChain, OpenAI API, Claude Code\\
+\end{tabularx}
+
+\section{Selected Publications}
+\begin{itemize}
+  \item Zhao, D., Schweizer, F., \textbf{Wang, Z.}, and Sornette, D. (2025). ``Polytope Fraud Theory.'' \textit{International Review of Financial Analysis}, 97, 103734. \href{https://www.sciencedirect.com/science/article/pii/S1057521924006665}{Article}
+  \item Dawid, H., Wang, H., \textbf{Wang, Z.}, Yi, J., and Harting, P. (2025). ``Agentic Workflows for Economic Research: Design and Implementation.'' \href{https://arxiv.org/abs/2504.09736}{arXiv}
+\end{itemize}
+
+\enlargethispage{3\baselineskip}
+\section{Recognition and Communication}
+\begin{itemize}
+  \item Doctoral Completion Scholarship (2025); organizer and speaker, AI Agents in Science workshop (2025); speaker at international computational-economics conferences.
+  \item Languages: Mandarin Chinese (C2), English (C1), German (C1), Cantonese Chinese (A2); French and Italian (basic).
+\end{itemize}
+
+\section{References}
+Available upon request.
+
+\end{document}
