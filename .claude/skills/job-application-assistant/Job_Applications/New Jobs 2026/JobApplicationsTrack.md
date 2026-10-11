@@ -32,16 +32,16 @@
 
 ## 20260828
 
-1. Comparus GmbH - Consultant Prozessintelligenz & KI 
+1. Comparus GmbH - Consultant Prozessintelligenz & KI
 2. TARGUS Management Consulting - Associate Management Consultant (m/w/d)
-3. ScaleHub - Consultant (m/w/d) – Input Management, AI-basierte Prozessautomatisierung & digitale Transformation 
-4. Sollers Consulting - Business Analyst (m/w/d) 
+3. ScaleHub - Consultant (m/w/d) – Input Management, AI-basierte Prozessautomatisierung & digitale Transformation
+4. Sollers Consulting - Business Analyst (m/w/d)
 5. Nect - Data Analyst (all genders)
 
 ## 20260831
 
 1. OPSinnovate - Junior HR Transformation Consultant (m/w/d) – Public Sector
-2. JOST World - Inhouse Consultant SAP CO (m/f/d) 
+2. JOST World - Inhouse Consultant SAP CO (m/f/d)
 3. Alpha Variance Solutions - Functional Consultant Finance Dynamics 365
 4. ENCAVIS GmbH - Quantitative Analyst Modelling & Pricing (m/f/d) in Renewable Energies
 5. io - Consultant Data Analytics / Simulation (m/w/d)
@@ -64,4 +64,17 @@
 4. Jump Trading - Quantitative Researcher | Trading team
 5. Argyll Scott - Data Analytics Manager - 40-50k (12 Month Contract)
 
+## 20261007
 
+1. Kroll (https://www.linkedin.com/company/kroll/life/) - Senior Associate, Competition and Regulatory Economics
+2. GetYourGuide - Staff Economist, Marketplace Economics
+3. ZS - Decision Analytics
+4. Compass Lexecon
+
+## 20261008
+
+1. DoorDash - Data Scientist / Senior Data Scientist
+2. [Senior Associate/Manager - Business Analyst (Trade Finance/Lending) - FS Consulting - Hong Kong](https://www.linkedin.com/jobs/view/4464199301/?trackingId=FWNEexSHiyHX97JW5%2B8N2w%3D%3D&refId=Za%2FPh6H%2BU1FAURrrX9G97Q%3D%3D&eBP=NOT_ELIGIBLE_FOR_CHARGING&alternateChannel=search&isJobSearch=false)
+3. [Oracle](https://www.linkedin.com/company/oracle/life/) - [Junior ERP SaaS Consultant (Contract - 12 month renewable)](https://www.linkedin.com/jobs/view/4475750458/?trackingId=EmxgTpMIsWxdzaMS5X5vwg%3D%3D&refId=Za%2FPh6H%2BU1FAURrrX9G97Q%3D%3D&eBP=NOT_ELIGIBLE_FOR_CHARGING&alternateChannel=search&isJobSearch=false)
+4. Nityo Infotech - Senior Business Analyst
+5. Bank of Communications Hong Kong Branch - Senior System Analyst (Data analytics)
