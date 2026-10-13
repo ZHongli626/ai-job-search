@@ -61,3 +61,21 @@ Applied working knowledge of monetary policy tools (interest rate management, re
 
 <!-- Flagged discrepancies in branch-level report data during review, supporting follow-up with reporting units.
 Built a reference summary of provincial monetary policy instruments for the review team. -->
+
+Referees Phone Number:
+
+Herbert 
++49 
+5211064843
+
+Domenico
+
++39
+0272342499
+
+Didier
++86
+0755-88015755
+
+Karl
++41 21 618 0111
