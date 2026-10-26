@@ -1,0 +1,159 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[margin=1.2cm,top=1.1cm,bottom=1.1cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{graphicx}
+
+\definecolor{accent}{HTML}{17365D}
+\definecolor{muted}{HTML}{4F5965}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdftitle={Zhongli Wang - Quantitative CV},
+  pdfauthor={Zhongli Wang}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\small\textcolor{muted}{\thepage}}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}{}
+  [\vspace{1pt}\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\setlist[itemize]{leftmargin=1.25em,nosep,topsep=0.5pt,itemsep=0.5pt}
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}\par
+}
+\newcommand{\project}[2]{%
+  \textbf{#1}\\[-1pt]
+  \textcolor{muted}{\small #2}\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{\textcolor{accent}{Zhongli Wang}}}\\[3pt]
+  {\large International Business Analysis \textbar{} Market \& Industry Research \textbar{} Economics \textbar{} Finance}\\[3pt]
+  Bielefeld, Germany \textbar{} PhD successfully defended on 21 September 2026\\[2pt]
+  \href{tel:+4916095416015}{+49 160 95416015} \textbar{}
+  \href{mailto:nkwangzhongli@gmail.com}{nkwangzhongli@gmail.com} \textbar{}
+  \href{https://sites.google.com/view/zhongli-wang/}{sites.google.com/view/zhongli-wang}
+\end{center}
+
+\section{Profile}
+PhD in Economics (Germany/Italy) with MA in Banking \& Finance (Switzerland) and BSc in Finance (China). 
+Multilingual analyst (native Chinese, C1 English, C1 German) with extensive overseas experience across Europe and China. 
+Strong foundation in international market research, industry analysis, tracking overseas-listed companies, and evaluating cross-border business opportunities. 
+Advanced analytical skills (Python, R, SQL, Excel) with proven ability to translate complex market and financial data into actionable business insights for stakeholders.
+
+\section{Core Competencies}
+\begin{itemize}
+  \item \textbf{Market research:} Industry analysis, tracking overseas-listed companies, evaluating collaboration opportunities, geopolitical and economic dynamics monitoring
+  \item \textbf{Financial analysis:} Financial statement analysis, company research, valuation metrics, banking operations, monetary policy, risk assessment
+  \item \textbf{Data analysis:} Python (pandas, NumPy, scikit-learn), R, SQL, Excel; data visualization, statistical analysis, financial databases
+  \item \textbf{Cross-cultural communication:} Native Chinese, C1 English, C1 German; experience working with international teams across Europe and Asia
+  \item \textbf{Client service \& business development:} Stakeholder management, presentation development (PowerPoint, reports), relationship building across cultures
+\end{itemize}
+
+\section{Research and Professional Experience}
+\role{Doctoral Researcher, Economics}{Oct. 2021--Oct. 2026}{Bielefeld University and Universit\`a Cattolica del Sacro Cuore}{Bielefeld / Milan}
+\begin{itemize}
+  \item Conduct international market research on ICT industry dynamics in Europe and North America: track overseas-listed companies (AT\&T, T-Mobile), analyze market structure, competitive behavior, and strategic investment decisions.
+  \item Evaluate business opportunities and market-entry dynamics; deliver data-driven recommendations and executive summaries for international audiences.
+  \item Collaborate with multicultural research teams across Germany and Italy; coordinate project timelines, deliverables, and client-facing presentations.
+  \item Monitor regulatory and policy developments affecting European ICT markets; incorporate geopolitical and economic dynamics into market analysis.
+\end{itemize}
+
+\role{Business Analyst, Data Science Project}{Aug. 2022--Sept. 2022}{LucidMinds, DataVille 3000 project}{Amsterdam}
+\begin{itemize}
+  \item Conducted market research on consumer preferences and industry dynamics; analyzed market data to support business development decisions.
+  \item Delivered scenario analyses and trade-off summaries for business stakeholders; presented findings in English to international clients.
+\end{itemize}
+
+\role{Helping Assistant}{June 2019--June 2021}{Quantitative Business Administration Team, University of Zurich}{Zurich}
+\begin{itemize}
+  \item Assisted in quantitative modeling and analysis using \textit{Mathematica}; developed teaching content for Applied Microeconomics, Corporate Finance, and Business Administration.
+\end{itemize}
+
+\role{Finance Internships}{2016--2017}{People's Bank of China; Agricultural Bank of China}{Lanzhou, China}
+\begin{itemize}
+  \item Analyzed provincial financial status reports and monetary policy implementation (interest rate management, reserve requirements) at China's central bank; built understanding of China's financial regulatory environment.
+  \item Conducted financial statement analysis and reviewed banking operations and internal reporting systems (FMIS) at a major state-owned commercial bank.
+\end{itemize}
+
+ 
+
+
+\section{Education}
+\textbf{PhD in Economics, Bielefeld University \& Universit\`a Cattolica} \hfill 2021--2026\\
+EPOC Marie Sk\l odowska-Curie program.
+
+\textbf{MA in Business and Economics, University of Zurich} \hfill 2018--2021\\
+Major: Banking \& Finance; Minor: Data Science; magna cum laude.
+
+\textbf{BSc in Finance, Nankai University} \hfill 2015--2018\\
+GPA: 4.39/5.0.
+
+\textbf{BA in German Language and Literature, Nankai University} \hfill 2014--2018\\
+GPA: 5.0/5.0.
+
+% \newpage
+\section{Key Projects}
+\project{Financial Fraud Detection Analysis}{Published in the \textit{International Review of Financial Analysis}, 2025}
+\begin{itemize}
+  \item Conducted comprehensive financial data analysis on accounting metrics and market indicators to identify fraud patterns and risk factors.
+  \item Developed data-driven fraud detection model using machine learning (XGBoost, Random Forest, Neural Networks); achieved significant improvement in detection accuracy for risk management applications.
+  \item Delivered actionable insights and recommendations for fraud prevention and risk assessment to business stakeholders.
+\end{itemize}
+
+
+\project{Agentic Workflows for Economic Research}{Published on arXiv, 2025}
+\begin{itemize}
+  \item Designed and implemented AI-powered agentic workflows using large language models (LLMs) and multi-agent systems to automate economic research tasks.
+  \item Developed end-to-end workflow system for research automation; coordinated with software engineers and economists to integrate AI agents into research processes.
+  \item Demonstrated practical applications of AI agents in economic analysis; presented findings to academic and technical audiences.
+\end{itemize}
+
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{3.2cm}X@{}}
+Data Analysis & Python (pandas, NumPy, matplotlib, scikit-learn), R (ggplot2, dplyr), SQL; data visualization, statistical analysis, financial data processing\\
+Office Tools & Excel (advanced), Word, PowerPoint; presentation development, report writing, executive summaries\\
+Finance Domain & Financial statement analysis, banking operations, monetary policy, fraud detection, risk assessment, capital markets\\
+Research & Industry analysis, company research, market dynamics tracking, geopolitical/economic monitoring, literature review\\
+Coding & Git, GitHub, Linux, Jupyter Notebook, LaTeX, Mathematica, VS Code\\
+Collaboration & Cross-functional teamwork, stakeholder communication, multicultural collaboration, business documentation\\
+\end{tabularx}
+
+\section{Publications}
+\begin{itemize}
+  \item Zhao et al. (2025). ``Polytope Fraud Theory.'' \textit{Int. Review of Financial Analysis}, 97, 103734.
+  \item Dawid et al. (2025). ``Agentic Workflows for Economic Research.'' arXiv preprint.
+  \item \textbf{Wang, Z.} (2025). ``Heterogeneous Consumers and the Data Value Chain.'' SSRN Working Paper.
+\end{itemize}
+
+\section{Awards \& Languages}
+\textbf{Awards:} Doctoral Completion Scholarship, Bielefeld Young Researchers' Fund (2025); Outstanding Graduate, Nankai University (2018).
+
+\textbf{Languages:} Mandarin Chinese (native), English (C1), German (C1), Cantonese (A2).
+
+\vspace{1cm}
+\noindent\hfill\includegraphics[width=2.7cm,keepaspectratio]{Wang-sig.jpg}
+
+\end{document}
