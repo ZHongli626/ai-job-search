@@ -1,0 +1,149 @@
+Positions:
+- Senior Digital Learning Solution Engineer (in the grade of Computer Officer II) in the Information Technology Services Unit   [RF: 2026/27-FT-072-JDB]
+- Part-time Teachers for Accounting and related Courses
+[RF: 2025/26-PT-152-JDB]
+- College Lecturer (Social Sciences) in the Community College   [RF: 2026/27-FT-069-JDB]
+- Software Developer (in the grade of Assistant Computer Officer II) in the Information Technology Services Unit   [RF: 2026/27-FT-068-JDB]
+
+Dates of Attendance
+(month / year)
+Name of Secondary School / Tertiary Institution
+Qualifications Obtained, with Grades or Classification, enter "N/A" if not applicable
+Date of Award (month/year)
+From
+To
+10/2021
+09/2026
+Bielefeld University
+PhD in Economics
+09/2026
+09/2018
+09/2021
+University of Zurich
+Master of Arts in Business and Economics
+09/2021
+09/2015
+06/2018
+Nankai University
+Bachelor of Science in Finance
+06/2018
+09/2014
+06/2018
+Nankai University
+Bachelor of Arts in German Language and Literature
+06/2018
+
+Professional Membership (if applicable) (in descending chronological order)
+Name of Professional Body
+Name of Award
+How it is Obtained
+(e.g. by Examination)
+Date of Award
+(month/year)
+Bloomberg
+Environmental Social Governance Certificate
+By Online Courses and Exercises
+01/2023
+Bloomberg
+Bloomberg Market Concepts Certificate
+By Online Courses and Exercises
+01/2023
+telc
+German C1
+By Examination
+03/2018
+
+Relevant Skills:	
+Complex Data Analysis, Economic and Financial Modeling
+Computer Skills, Language Skills, etc:	
+Python, R, Mathematica, MATLAB, LLM Agents; Mandarin, English, German, French, Cantonese
+
+
+Employment History (in descending chronological order)
+Appointment Period
+(month / year)
+Name of Employer
+Position Held and Major Job Duties
+(if part-time, please specify)
+From
+To
+10/2021
+09/2024
+Bielefeld University
+ 
+Education/Training
+Position :	
+Doctoral Researcher
+Duties :	
+Delivered data-driven research projects, combining theoretical modeling with statistical sampling and empirical analysis, and applying machine learning and simulation methods to study complex economic systems.
+ 	Part-time job?
+08/2022
+09/2022
+LucidMinds
+ 
+Consulting
+Position :	
+Research Assistant
+Duties :	
+Contributed to the “DataVille 3000” project by developing and analyzing computational models in Python, focusing on dynamic system behavior and model-driven insights for consumer preferences.
+ 	Part-time job?
+06/2019
+06/2021
+University of Zurich
+ 
+Education/Training
+Position :	
+Helping Assistant
+Duties :	
+Developed and maintained quantitative modeling systems using Mathematica for Microeconomics and Corporate Finance courses. Engineered supplemental teaching content and interactive problem-solving tools to support large-enrollment courses. Contributed to the development of SYLVA, an automated grade evaluation software system. 
+ 	Part-time job?
+09/2017
+12/2017
+Continental
+ 
+Engineering/Machinery
+Position :	
+HR Intern
+Duties :	
+Supported recruitment initiatives by assisting in student hiring programs and coordinating interview logistics. Translated internal HR materials across English, German and Chinese, facilitating multilingual communication. Managed administrative tasks related to reimbursement processes, ensuring accuracy and compliance with internal procedures.
+ 	Part-time job?
+
+Present / Last Drawn Monthly Salary:	
+Expected Salary: *	
+50000
+If appointed, when would you be able to assume duty?/ Notice period to current employer:	
+01/12/2026
+
+How did you learn about this vacancy? *
+	CTgoodjobs		JobsDB		cpjobs		HKU SPACE Homepage		HKU SPACE Intranet
+	LinkedIn		Facebook		Instagram		JIJIS		FSTE
+	Employee of HKU SPACE		Others: (pls specify)	
+
+Please provide details of two referees in the following boxes after you have obtained their consent.
+At least one of your referees should have direct knowledge of your recent academic and/or working experience.
+For teaching/academic posts, at least one of your referees should be able to comment on your teaching ability and contributions to teaching.
+Referees:
+Name
+Position
+Company & Address
+Contact Phone
+Email Address
+Herbert Dawid
+Professor
+Bielefeld University
++495211064843
+hdawid@uni-bielefeld.de
+Karl Schmedders
+Professor
+IMD Lausanne
++41216180111
+karl.schmedders@imd.org
+
+- Senior Digital Learning Solution Engineer (in the grade of Computer Officer II) in the Information Technology Services Unit   [RF: 2026/27-FT-072-JDB]
+- Part-time Teachers for Accounting and related Courses
+[RF: 2025/26-PT-152-JDB]
+- College Lecturer (Social Sciences) in the Community College   [RF: 2026/27-FT-069-JDB]
+- Software Developer (in the grade of Assistant Computer Officer II) in the Information Technology Services Unit   [RF: 2026/27-FT-068-JDB]
+
+
+

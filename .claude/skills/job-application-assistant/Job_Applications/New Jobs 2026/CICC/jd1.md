@@ -1,0 +1,16 @@
+【2027】Strategic Management Specialist(J19678)
+需求部门：战略发展部招聘类别：校园招聘/暑期实习发布时间：2026-09-03工作地点：香港特别行政区
+工作职责：
+1.Conduct research, formulation and implementation of corporate strategy, participate in research and analysis covering macro trends, policy directions,industrial development and corporate developments, assist in the execution and administration of corporate strategic planning, and undertake planning, analysis and management of the Company’s businesses and products to meet strategic management requirements.
+2.Be responsible for daily institutional and equity management, review applications for proposals submitted by subsidiaries, process applications for establishment, alteration, capital increase or reduction, transfer and deregistration of institutions, participate in the formulation of relevant rules and mechanisms, assist in research, scheme design, implementation of institutional reforms for subsidiaries, as well as equity operation of subsidiaries.
+3.Support digital closed-loop management, covering IT resource allocation, input-output evaluation, group-level data reporting, online automation, and data asset management initiatives, assist in driving key digital projects, and formulate operational strategies for the corporate knowledge base, promote knowledge activation and dissemination, and track knowledge quality and operations.
+4.Drive the Company’s international development initiatives, facilitate communication between the department and overseas subsidiaries and support the rollout of key overseas businesses and projects; participate in the implementation of overseas strategic planning management, institutional and equity management, and other relevant tasks.
+5.Support corporate capital operations and strategic synergy efforts, take part in research, feasibility assessment, project implementation and cross-departmental coordination for capital operation, assist in research planning, data analysis, statistics and overall coordination for strategic business cooperation within the scope of departmental responsibilities.
+6.Perform other duties assigned by the department.
+任职资格：
+1.Upright, humble, diligent with high moral values.
+2.Fresh graduates with a master's degree or above, majors in finance, economics, accounting, statistics, management, law, IT, natural sciences, engineering, humanities and social sciences are preferred.
+3.Relevant internship experience in financial institutions related to the above job responsibilities is preferred.
+4.Proficiency in office software including Excel, Word, and PowerPoint. Candidates familiar with information systems like Wind, Bloomberg, and Dealogic, with basic knowledge of data indicator modeling methods and database languages are preferred.
+5.Excellent written and verbal communication skills, strong English proficiency in both communication and reading/writing is preferred.
+6.Proactive work attitude, strong sense of responsibility, good organizational and coordination skills, and solid abilities in teamwork, communication and problem-solving, logical thinking, quick learning, and multitasking.
