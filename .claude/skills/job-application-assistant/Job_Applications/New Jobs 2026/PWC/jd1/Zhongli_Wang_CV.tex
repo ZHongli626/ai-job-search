@@ -1,0 +1,156 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[margin=1.2cm,top=1.1cm,bottom=1.1cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{graphicx}
+
+\definecolor{accent}{HTML}{17365D}
+\definecolor{muted}{HTML}{4F5965}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdftitle={Zhongli Wang - Quantitative CV},
+  pdfauthor={Zhongli Wang}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\small\textcolor{muted}{\thepage}}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}{}
+  [\vspace{1pt}\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\setlist[itemize]{leftmargin=1.25em,nosep,topsep=0.5pt,itemsep=0.5pt}
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}\par
+}
+\newcommand{\project}[2]{%
+  \textbf{#1}\\[-1pt]
+  \textcolor{muted}{\small #2}\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{\textcolor{accent}{Zhongli Wang}}}\\[3pt]
+  {\large Business Analytics \textbar{} Data-Driven Decision Making \textbar{} Economics \textbar{} Finance}\\[3pt]
+  Bielefeld, Germany \textbar{} PhD successfully defended on 21 September 2026\\[2pt]
+  \href{tel:+4916095416015}{+49 160 95416015} \textbar{}
+  \href{mailto:nkwangzhongli@gmail.com}{nkwangzhongli@gmail.com} \textbar{}
+  \href{https://sites.google.com/view/zhongli-wang/}{sites.google.com/view/zhongli-wang}
+\end{center}
+
+\section{Profile}
+PhD in Economics with MA in Banking \& Finance and Data Science, plus BSc in Finance. Strong foundation in financial domain knowledge and business acumen with advanced Python, R, and SQL skills. Proven ability to translate complex data into actionable business insights, manage analytical projects end-to-end, and communicate findings to stakeholders. Experience in financial analysis, fraud detection, and data-driven decision-making across banking and research environments.
+
+\section{Core Competencies}
+\begin{itemize}
+  \item \textbf{Data analysis:} Python (pandas, NumPy, scikit-learn), R, SQL; data visualization, statistical analysis, metric monitoring
+  \item \textbf{Business problem-solving:} Requirements gathering, root cause analysis, solution design, business case development, stakeholder alignment
+  \item \textbf{Finance domain:} Banking operations, financial statement analysis, accounting metrics, fraud detection, risk assessment, monetary policy
+  \item \textbf{Project management:} End-to-end project ownership from problem definition to analysis, recommendations, and implementation support
+  \item \textbf{Communication:} Translating technical analysis into business recommendations, presenting findings to stakeholders, cross-functional collaboration
+\end{itemize}
+
+\section{Research and Professional Experience}
+\role{Doctoral Researcher, Economics}{Oct. 2021--Oct. 2026}{Bielefeld University and Universit\`a Cattolica del Sacro Cuore}{Bielefeld / Milan}
+\begin{itemize}
+  \item Manage end-to-end analytical projects: define business problems, design analytical solutions, conduct data analysis and testing, and present findings to stakeholders.
+  \item Analyze firm-level financial data (AT\&T, T-Mobile) to extract insights on market dynamics, competitive behavior, and business outcomes; develop data-driven recommendations.
+  \item Collaborate with international teams; present findings to academic and business audiences; coordinate project timelines and deliverables.
+  \item Monitor key performance indicators, conduct sensitivity analysis, and optimize analytical approaches to improve accuracy and business relevance.
+\end{itemize}
+
+\role{Business Analyst, Data Science Project}{Aug. 2022--Sept. 2022}{LucidMinds, DataVille 3000 project}{Amsterdam}
+\begin{itemize}
+  \item Gathered business requirements and translated them into analytical solutions; developed Python-based tools to model consumer behavior and market dynamics.
+  \item Communicated technical findings to business stakeholders; iterated solutions based on business feedback and performance metrics.
+\end{itemize}
+
+\role{Helping Assistant}{June 2019--June 2021}{Quantitative Business Administration Team, University of Zurich}{Zurich}
+\begin{itemize}
+  \item Assisted in quantitative modeling and analysis using \textit{Mathematica}; developed teaching content for Applied Microeconomics, Corporate Finance, and Business Administration.
+\end{itemize}
+
+\role{Finance Internships}{2016--2017}{People's Bank of China; Agricultural Bank of China}{Lanzhou, China}
+\begin{itemize}
+  \item Analyzed financial status reports and supported monetary policy analysis at People's Bank of China; gained expertise in interest rate management and reserve requirements.
+  \item Conducted financial reporting analysis and process improvement work at Agricultural Bank of China; reviewed banking operations and FMIS systems.
+\end{itemize}
+
+ 
+
+
+\section{Education}
+\textbf{PhD in Economics, Bielefeld University \& Universit\`a Cattolica} \hfill 2021--2026\\
+EPOC Marie Sk\l odowska-Curie program.
+
+\textbf{MA in Business and Economics, University of Zurich} \hfill 2018--2021\\
+Major: Banking \& Finance; Minor: Data Science; magna cum laude.
+
+\textbf{BSc in Finance, Nankai University} \hfill 2015--2018\\
+GPA: 4.39/5.0.
+
+\textbf{BA in German Language and Literature, Nankai University} \hfill 2014--2018\\
+GPA: 5.0/5.0.
+
+% \newpage
+\section{Key Projects}
+\project{Financial Fraud Detection Analysis}{Published in the \textit{International Review of Financial Analysis}, 2025}
+\begin{itemize}
+  \item Conducted comprehensive financial data analysis on accounting metrics and market indicators to identify fraud patterns and risk factors.
+  \item Developed data-driven fraud detection model using machine learning (XGBoost, Random Forest, Neural Networks); achieved significant improvement in detection accuracy for risk management applications.
+  \item Delivered actionable insights and recommendations for fraud prevention and risk assessment to business stakeholders.
+\end{itemize}
+
+
+\project{Agentic Workflows for Economic Research}{Published on arXiv, 2025}
+\begin{itemize}
+  \item Designed and implemented AI-powered agentic workflows using large language models (LLMs) and multi-agent systems to automate economic research tasks.
+  \item Developed end-to-end workflow system for research automation; coordinated with software engineers and economists to integrate AI agents into research processes.
+  \item Demonstrated practical applications of AI agents in economic analysis; presented findings to academic and technical audiences.
+\end{itemize}
+
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{3.2cm}X@{}}
+Data Analysis & Python (pandas, NumPy, matplotlib, scikit-learn), R (ggplot2, dplyr), SQL; data visualization, statistical analysis, metric monitoring\\
+Business Analytics & Fraud detection, risk assessment, financial analysis, business case development, KPI tracking, exploratory data analysis\\
+Finance Domain & Banking operations, financial statement analysis, accounting metrics, fraud detection, risk assessment, monetary policy\\
+Modeling & Machine learning (XGBoost, Random Forest), supervised learning, Mathematica, statistical modeling\\
+Coding & Git, GitHub, Linux, Jupyter Notebook, LaTeX, VS Code\\
+Collaboration & Cross-functional teamwork, stakeholder communication, requirements gathering, business documentation\\
+\end{tabularx}
+
+\section{Publications}
+\begin{itemize}
+  \item Zhao et al. (2025). ``Polytope Fraud Theory.'' \textit{Int. Review of Financial Analysis}, 97, 103734.
+  \item Dawid et al. (2025). ``Agentic Workflows for Economic Research.'' arXiv preprint.
+  \item \textbf{Wang, Z.} (2025). ``Heterogeneous Consumers and the Data Value Chain.'' SSRN Working Paper.
+\end{itemize}
+
+\section{Awards \& Languages}
+\textbf{Awards:} Doctoral Completion Scholarship, Bielefeld Young Researchers' Fund (2025); Outstanding Graduate, Nankai University (2018).
+
+\textbf{Languages:} Mandarin Chinese (native), English (C1), German (C1), Cantonese (A2).
+
+\vspace{1cm}
+\noindent\hfill\includegraphics[width=2.7cm,keepaspectratio]{Wang-sig.jpg}
+
+\end{document}
