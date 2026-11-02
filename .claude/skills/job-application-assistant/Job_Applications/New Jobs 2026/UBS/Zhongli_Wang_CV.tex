@@ -1,0 +1,164 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[margin=1.2cm,top=1.1cm,bottom=1.1cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{needspace}
+
+\definecolor{accent}{HTML}{17365D}
+\definecolor{muted}{HTML}{4F5965}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdftitle={Zhongli Wang - Quantitative CV},
+  pdfauthor={Zhongli Wang}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\small\textcolor{muted}{\thepage}}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}{}
+  [\vspace{1pt}\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\setlist[itemize]{leftmargin=1.25em,nosep,topsep=0.5pt,itemsep=0.5pt}
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}\par
+}
+\newcommand{\project}[2]{%
+  \textbf{#1}\\[-1pt]
+  \textcolor{muted}{\small #2}\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{\textcolor{accent}{Zhongli Wang}}}\\[3pt]
+  {\large Quantitative Research \textbar{} Machine Learning \textbar{} Financial Data \textbar{} AI}\\[3pt]
+  Bielefeld, Germany \textbar{} PhD successfully defended on 21 September 2026 \textbar{} Hong Kong TTPS Approved \\[2pt]
+  \href{tel:+4916095416015}{+49 160 95416015} \textbar{}
+  \href{mailto:nkwangzhongli@gmail.com}{nkwangzhongli@gmail.com} \textbar{}
+  \href{https://sites.google.com/view/zhongli-wang/}{sites.google.com/view/zhongli-wang}
+\end{center}
+
+\section{Profile}
+PhD in Economics with MA in Banking \& Finance and a Data Science minor, plus BSc in Finance. Quantitative researcher combining Python, machine learning, agent-based modelling, and financial-data analysis to study complex and changing markets. Experience taking research questions from model design and large-scale data analysis through validation, interpretation, and communication, with published work in financial fraud detection and AI-enabled research workflows. Brings strong statistical reasoning, financial domain knowledge, and collaborative communication to AI-driven electronic trading.
+
+\section{Core Competencies}
+\begin{itemize}
+  \item \textbf{Quantitative research:} Statistical learning, supervised learning, agent-based modelling, numerical methods, model calibration, sensitivity analysis
+  \item \textbf{Python and ML:} Python (pandas, NumPy, scikit-learn, XGBoost), R, SQL; reproducible analysis, feature construction, model comparison, data visualization
+  \item \textbf{Financial data and risk:} Financial statement analysis, fraud detection, accounting metrics, banking operations, monetary policy, risk assessment
+  \item \textbf{Research ownership:} Research design, data preparation, computational implementation, validation, interpretation, and communication of evidence-based findings
+  \item \textbf{AI and collaboration:} LLM and multi-agent workflows, technical documentation, presentations, cross-functional collaboration with economists and software engineers
+\end{itemize}
+
+\section{Research and Professional Experience}
+\role{Doctoral Researcher, Economics}{Oct. 2021--Oct. 2026}{Bielefeld University and Universit\`a Cattolica del Sacro Cuore}{Bielefeld / Milan}
+\begin{itemize}
+  \item Design and implement computational research in Python, combining agent-based models, machine learning, numerical methods, and financial data to study market dynamics and firm behavior.
+  \item Analyse AT\&T and T-Mobile financial data, construct model inputs, and compare alternative estimation and validation approaches for research on capacity, competition, and data markets.
+  \item Conduct sensitivity analysis and robustness checks, document assumptions, and interpret results with attention to model limitations, overfitting risk, and changing economic conditions.
+  \item Own projects from research question and data preparation through computational implementation, validation, written analysis, and presentations to international academic and business audiences.
+\end{itemize}
+
+\role{Research Assistant, Data Science Project}{Aug. 2022--Sept. 2022}{LucidMinds, DataVille 3000 project}{Amsterdam}
+\begin{itemize}
+  \item Gathered requirements and developed Python-based computational tools to model consumer behaviour and dynamic market interactions.
+  \item Analysed model outputs, communicated technical findings to stakeholders, and iterated the approach using feedback and performance metrics.
+\end{itemize}
+
+\role{Helping Assistant}{June 2019--June 2021}{Quantitative Business Administration Team, University of Zurich}{Zurich}
+\begin{itemize}
+  \item Assisted with quantitative modelling and analysis using \textit{Mathematica}; developed teaching content for Applied Microeconomics, Corporate Finance, and Business Administration.
+\end{itemize}
+
+\role{HR Intern}{Sept. 2017--Dec. 2017}{Continental Automotive Systems, Tianjin}{Tianjin, China}
+\begin{itemize}
+  \item Supported recruitment initiatives by assisting in student hiring programs and coordinating interview logistics.
+  \item Translated internal HR materials across English, German and Chinese, facilitating multilingual communication.
+  \item Managed administrative tasks related to reimbursement processes, ensuring accuracy and compliance with internal procedures.
+\end{itemize}
+
+\needspace{7\baselineskip}
+\role{Finance Internships}{2016--2017}{People's Bank of China; Agricultural Bank of China; Gansu Provincial Highway Aviation Tourism Financial Services Co.}{Lanzhou, China}
+\begin{itemize}
+  \item Analysed financial status reports and supported monetary policy analysis at People's Bank of China, gaining exposure to interest-rate management and reserve requirements.
+  \item Conducted financial reporting analysis and process-improvement work at Agricultural Bank of China; reviewed banking operations and FMIS systems.
+  \item Reviewed and summarized quartet agreements to support approval processes for monthly loan items and assisted in account reconciliation.
+  \item Collaborated with department managers to analyze and interpret cases reported in annual financial statements.
+\end{itemize}
+
+ 
+
+
+\section{Education}
+\textbf{PhD in Economics, Bielefeld University \& Universit\`a Cattolica} \hfill 2021--2026\\
+EPOC Marie Sk\l odowska-Curie program.
+
+\textbf{MA in Business and Economics, University of Zurich} \hfill 2018--2021\\
+Major: Banking \& Finance; Minor: Data Science; magna cum laude.
+
+\textbf{BSc in Finance, Nankai University} \hfill 2015--2018\\
+GPA: 4.39/5.0.
+
+\textbf{BA in German Language and Literature, Nankai University} \hfill 2014--2018\\
+GPA: 5.0/5.0.
+
+% \newpage
+\section{Key Projects}
+\project{Financial Fraud Detection Analysis}{Published in the \textit{International Review of Financial Analysis}, 2025}
+\begin{itemize}
+  \item Conducted financial-data analysis on accounting metrics and market indicators to identify fraud patterns and risk factors.
+  \item Developed and compared supervised-learning fraud-detection models using XGBoost, Random Forest, and neural networks for risk-management applications.
+  \item Interpreted model outputs and translated empirical evidence into recommendations for fraud prevention and risk assessment.
+\end{itemize}
+
+
+\project{Agentic Workflows for Economic Research}{Published on arXiv, 2025}
+\begin{itemize}
+  \item Designed and implemented AI-powered agentic workflows using large language models (LLMs) and multi-agent systems to automate economic research tasks.
+  \item Built an end-to-end research-automation workflow and coordinated with software engineers and economists to integrate AI agents into research processes.
+\end{itemize}
+
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{3.2cm}X@{}}
+Data and ML & Python (pandas, NumPy, matplotlib, scikit-learn, XGBoost), R (ggplot2, dplyr), SQL; feature construction, statistical analysis\\
+Quantitative Methods & Agent-based modelling, numerical methods, statistical modelling, sensitivity analysis, model calibration, SMM, MCMC\\
+Financial Research & Financial statement analysis, fraud detection, accounting metrics, banking operations, monetary policy, risk assessment\\
+AI Workflows & LLMs, Microsoft AutoGen, multi-agent systems, research automation, technical documentation\\
+Coding & Git, GitHub, Linux, Jupyter Notebook, LaTeX, VS Code\\
+Collaboration & Cross-functional teamwork, stakeholder communication, requirements gathering, research presentations\\
+\end{tabularx}
+
+\section{Publications}
+\begin{itemize}
+  \item Zhao et al. (2025). ``Polytope Fraud Theory.'' \textit{Int. Review of Financial Analysis}, 97, 103734.
+  \item Dawid et al. (2025). ``Agentic Workflows for Economic Research.'' arXiv preprint.
+  \item \textbf{Wang, Z.} (2025). ``Heterogeneous Consumers and the Data Value Chain.'' SSRN Working Paper.
+\end{itemize}
+
+\enlargethispage{3\baselineskip}
+\section{Awards \& Languages}
+\textbf{Awards:} Doctoral Completion Scholarship, Bielefeld Young Researchers' Fund (2025); Outstanding Graduate, Nankai University (2018).
+
+\textbf{Languages:} Mandarin Chinese (native), English (C1), German (C1), French (A2), Cantonese (A2).
+
+\end{document}
